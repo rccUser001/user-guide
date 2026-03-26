@@ -31,16 +31,9 @@ extra_css:
 
 nav:
   - Home: 'index.md' 
-  - 'RCC 101':  
-    - Accounts: 101/accounts.md 
-    - Ecosystems: 101/ecosystems.md 
-    - Allocations: 101/allocations.md 
-    - Software: 101/software.md
-    - Data Storage: 101/data.md
-    - Computing: 101/jobs.md 
-    - Policies: 101/policies.md 
-    - Glossary: 101/glossary.md 
-    - Mistakes: 101/mistakes.md
+  - Accounts: accounts.md 
+  - Ecosystems: ecosystems.md 
+  - Allocations: allocations.md 
 
   - Connection: 
     - Overview: connection/connecting.md
@@ -69,8 +62,6 @@ nav:
   - 'Storage': 
     - Basics: storage/main.md 
     - FAQ: storage/faq.md
-
-  - Partitions: partitions.md
 
   - 'Software':
     - Overview: software/index.md
@@ -125,10 +116,15 @@ nav:
   
   - 'Computing': 
     - Scheduler: slurm/main.md
-    - Batch Jobs: slurm/sbatch.md 
+    - Partitions: partitions.md
     - Interactive Jobs: slurm/sinteractive.md
+    - Batch Jobs: slurm/sbatch.md 
     - FAQ: slurm/faq.md
-
+  
+  - Policies: policies.md 
+  - Glossary: glossary.md 
+  - Mistakes: mistakes.md
+  
   - "MidwayR3":
     - Overview: midwayR3/overview.md
     - Accessing: midwayR3/accessing.md
