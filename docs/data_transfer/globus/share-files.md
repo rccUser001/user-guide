@@ -6,7 +6,7 @@
 Go to the "File Manager" tab of the <a href='https://globus.rcc.uchicago.edu/' target='_blank'>Globus Web App</a>. Navigate to the folder that houses the files you want to share (<a href='./access-files.md#Browse-Your-Files'>read more about browsing files here</a>), right-click it, and select "Share" from the menu that appears:
 
 <p align='center'>
-<img src='../../img/globus/select-files.png'
+<img src='/img/globus/select-files.png'
 width='650'
 alt='Globus web app open to the File Manager page with a folder selected.'/>
 </p>
@@ -15,7 +15,7 @@ alt='Globus web app open to the File Manager page with a folder selected.'/>
 If the files you have selected are not already part of a Guest Collection, you will see a message that "No collections match that filter." Click "Add Guest Collection" in the upper-right corner to create a collection of your selected files to share with external collaborators:
 
 <p align='center'>
-<img src='../../img/globus/add-guest-collection.png'
+<img src='/img/globus/add-guest-collection.png'
 width='650'
 alt='Globus File Manager open to the Collections tab with the Add Guest Collection button highlighted.'/>
 </p>
@@ -23,7 +23,7 @@ alt='Globus File Manager open to the Collections tab with the Add Guest Collecti
 The Directory field will default to the folder that houses the files you have selected to share. Fill in the Display Name field and any other fields you like, then click "Create Collection":
 
 <p align='center'>
-<img src='../../img/globus/create-collection.png'
+<img src='/img/globus/create-collection.png'
 width='650'
 alt='Globus File Manager open to Create new Guest Collection with the Create Collection button highlighted.'/>
 </p>
@@ -34,7 +34,7 @@ The Filer Manager will open to the Permissions tab of your new collection, which
 If the files you have selected are already part of a Guest Collection, click the collection name:
 
 <p align='center'>
-<img src='../../img/globus/collection-name.png'
+<img src='/img/globus/collection-name.png'
 width='650'
 alt='Globus File Manager open to Create new Guest Collection with the Create Collection button highlighted.'/>
 </p>

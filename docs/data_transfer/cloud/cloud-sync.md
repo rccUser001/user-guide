@@ -19,7 +19,7 @@ Globus Staff GCSv5.4 Demo **OneDrive**
 When you choose a UChicago cloud storage endpoint, you will need to give Globus permission to access files you have stored on that cloud platform. For example, if you choose the Globus Staff GCSv5.4 Demo Box (UChicago) endpoint, you will see a message like this:
 
 <p align='center'>
-<img src='../../img/globus/box.png'
+<img src='/img/globus/box.png'
 width='550'
 alt='Globus File Manager with "Globus Staff GCSv5.4 Demo Box (UChicago) endpoint" typed into the Collection search bar and an "Authentication/Consent Required" message.'/>
 </p>
@@ -27,7 +27,7 @@ alt='Globus File Manager with "Globus Staff GCSv5.4 Demo Box (UChicago) endpoint
 When you click "Continue," Globus will route you to an identity verification page. Click "Globus Staff (globus.org)" to proceed:
 
 <p align='center'>
-<img src='../../img/globus/box-identity-required.png'
+<img src='/img/globus/box-identity-required.png'
 width='550'
 alt='Web page titled "Identity Required" with "Link to an identity from Globus Staff" highlighted.'/>
 </p>
@@ -35,7 +35,7 @@ alt='Web page titled "Identity Required" with "Link to an identity from Globus S
 When you click "Globus Staff (globus.org)," Globus will route you to the Box sign-in page. Choose the Google account associated with the files you would like to access through Globus:
 
 <p align='center'>
-<img src='../../img/globus/box-sign-in.png'
+<img src='/img/globus/box-sign-in.png'
 width='350'
 alt='Box sign-in page with a "Choose an account to continue to globus.org" message.'/>
 </p>

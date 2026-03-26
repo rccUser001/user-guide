@@ -1,6 +1,7 @@
 site_name: RCC User Guide
 repo_url: https://rcc.uchicago.edu/
 repo_name: Main RCC website
+docs_dir: docs
 theme:
   name: 'material'
   # name: 'readthedocs'
@@ -51,6 +52,19 @@ nav:
     - 'ThinLinc': 
       - Basics: connection/thinlinc/main.md
       - Troubleshooting: connection/thinlinc/troubleshooting.md
+  
+  - 'Data Transfer':
+    - SFTP Clients: data_transfer/sftp/clients.md
+    - Globus: 
+      - Access Files: data_transfer/globus/access-files.md
+      - Transfer Files: data_transfer/globus/transfer-files.md
+      - Share Files: data_transfer/globus/share-files.md
+    - SAMBA: data_transfer/persistent_mapping/samba.md
+    - CLI: data_transfer/cli/cli.md
+    - Cloud:
+      - Skyway: data_transfer/cloud/skyway-overview.md
+      # - RClone: data_transfer/cloud/rclone.md
+      # - Globus: data_transfer/cloud/cloud-sync.md
 
   - 'Storage': 
     - Basics: storage/main.md 
@@ -99,29 +113,16 @@ nav:
     - AlphaFold: databases/alphafold.md
     - BFI: databases/bfi.md
     - Booth: databases/booth.md
-
-  
-  
+ 
   - "Tutorials":
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
-
-
-
-  - SAMBA: samba.md
-
-  - 'Globus': 
-    - Access Files: globus/access-files.md
-    - Transfer Files: globus/transfer-files.md
-    - Share Files: globus/share-files.md
 
   - 'GIS':
     - Basics: gis/index.md
     - Geocoding: gis/geocoding.md
     - Geospatial: gis/MidwayGeoSpatial.md
-
-  - HTTP: http.md
-
+  
   - 'SLURM': 
     - Basics: slurm/main.md
     - SBATCH: slurm/sbatch.md 

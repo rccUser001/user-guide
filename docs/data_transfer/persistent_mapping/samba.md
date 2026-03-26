@@ -72,7 +72,7 @@ On a Windows computer, select “Map Network Drive” and enter one of the follo
 
 Enter **``ADLOCAL\CNetID``** for the username and enter your CNetID password.  
 
-![Map Network Drive](img/data_management/map_network_drive.png)
+![Map Network Drive](/img/data_management/map_network_drive.png)
 
 ## Connecting from macOS   
 
@@ -141,4 +141,4 @@ On a macOS X computer, select “Connect to Server” (from "Go" dropdown in Fin
 Enter **``ADLOCAL\CNetID``** for the username and enter your CNetID password.  
 
 
-![Connect to Server](img/data_management/connect_to_server.jpg)  
+![Connect to Server](/img/data_management/connect_to_server.jpg)  
