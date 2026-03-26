@@ -27,19 +27,30 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+
 nav:
   - Home: 'index.md' 
   - 'RCC 101':  
     - Accounts: 101/accounts.md 
     - Ecosystems: 101/ecosystems.md 
     - Allocations: 101/allocations.md 
-    - Connecting: 101/connecting.md
     - Software: 101/software.md
     - Data Storage: 101/data.md
     - Computing: 101/jobs.md 
     - Policies: 101/policies.md 
     - Glossary: 101/glossary.md 
     - Mistakes: 101/mistakes.md
+
+  - Connection: 
+    - Overview: connection/connecting.md
+    - 'Open OnDemand': connection/open_ondemand/open_ondemand.md
+    - 'SSH': 
+      - Basics: connection/ssh/main.md 
+      - Advanced: connection/ssh/advance.md 
+      - FAQ: connection/ssh/faq.md
+    - 'ThinLinc': 
+      - Basics: connection/thinlinc/main.md
+      - Troubleshooting: connection/thinlinc/troubleshooting.md
 
   - 'Storage': 
     - Basics: storage/main.md 
@@ -89,20 +100,13 @@ nav:
     - BFI: databases/bfi.md
     - Booth: databases/booth.md
 
-  - 'Open OnDemand': open_ondemand/open_ondemand.md
+  
   
   - "Tutorials":
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
 
-  - 'SSH': 
-    - Basics: ssh/main.md 
-    - Advanced: ssh/advance.md 
-    - FAQ: ssh/faq.md
 
-  - 'ThinLinc': 
-    - Basics: thinlinc/main.md
-    - Troubleshooting: thinlinc/troubleshooting.md
 
   - SAMBA: samba.md
 
