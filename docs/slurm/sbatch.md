@@ -987,4 +987,3 @@ sbatch --quiet --begin=$(next-cron-time "$SCHEDULE") cron.sbatch
 ```
 
 After executing a simple command (print the hostname, date, and time), the script schedules the next run with another call to `sbatch` with the `--begin` option.
-

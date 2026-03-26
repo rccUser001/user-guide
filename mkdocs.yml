@@ -123,10 +123,10 @@ nav:
     - Geocoding: gis/geocoding.md
     - Geospatial: gis/MidwayGeoSpatial.md
   
-  - 'SLURM': 
-    - Basics: slurm/main.md
-    - SBATCH: slurm/sbatch.md 
-    - SINTERACTIVE: slurm/sinteractive.md
+  - 'Computing': 
+    - Scheduler: slurm/main.md
+    - Batch Jobs: slurm/sbatch.md 
+    - Interactive Jobs: slurm/sinteractive.md
     - FAQ: slurm/faq.md
 
   - "MidwayR3":
