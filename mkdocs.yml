@@ -30,7 +30,6 @@ extra_css:
 nav:
   - Home: 'index.md' 
   - 'RCC 101':  
-    - Get Started: 101/index.md
     - Accounts: 101/accounts.md 
     - Ecosystems: 101/ecosystems.md 
     - Allocations: 101/allocations.md 

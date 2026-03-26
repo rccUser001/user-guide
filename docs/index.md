@@ -20,7 +20,8 @@ Connect to RCC compute nodes and gain access to a wide array of software tools t
 Find out how to facilitate collaboration by extending RCC account access to non-UChicago collaborators. Ensure reproducibility in your projects with our user-friendly tools and environments.
 
 [**Getting Help:**](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'}  
-Access troubleshooting resources using this user guide, visit our lab at REG 216 or email us at help@rcc.uchicago.edu. 
+The preferred way of requesting support is to [contact our Help Desk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'}.
+RCC’s walk-in lab is open during business hours and is located in Regenstein Library room 216. Feel free to drop by to chat with one of our staff members if you get stuck.
 
 [**Glossary:**](101/glossary.md)  
 Consult our glossary for an overview of the key terms used throughout this user guide, ensuring clarity and understanding as you navigate RCC's resources. 
