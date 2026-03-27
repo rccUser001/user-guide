@@ -1,5 +1,4 @@
 # Python and Anaconda
-
 ## Getting Started
 
 Different versions of Python on Midway are offered as modules. To check the full list of Python modules
@@ -175,7 +174,20 @@ with:
     Never run `conda init` on Midway. It modifies your shell startup scripts and can break module behavior, non-interactive shells, and ThinLinc sessions. Use `source activate` instead of `conda activate`.
 
 ## Managing Environments
+Suppose that you would like to install numpy, matplotlib and pandas for your calculations. You should first create an environment in your own space and install these packages into this environment.  See [managing Python environments](../software/apps-and-envs/python.md) for more information.
 
+Since Python environments might contain many files and/or take a lot space, it is recommended that you create your environments somewhere outside your home folder such as `/project` or `/scratch`. Suppose that your PI has a space under `/project/[pi-folder]` and you have a folder under that location.
+
+```
+cd /project/[pi-folder]/[your-cnetid]
+python -m venv my-venv
+source ./my-venv/bin/activate
+pip install matplotlib numpy pandas
+```
+
+Note that the base environment of the default `python` module already has many popular packages installed, including the above 3 packages. You can also create an environment and install packages with `conda` or `mamba`.
+
+## Preconfigured Environments
 With each Anaconda distribution, we have a small selection of widely used environments. Many, such as
 Tensorflow or DeepLabCut should be loaded through their modules (i.e., `module load tensorflow`), which automate the loading of other
 relevant libraries that are available as modules.

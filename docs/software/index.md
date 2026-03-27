@@ -1,65 +1,12 @@
-##  Getting your software ready
+## Private Software 
 
-You should check what software packages are already installed on Midway3 via `module avail` and `module list`. Many commonly used software packages and libraries have been installed on Midway for your use.  For an overview of how to use Software Modules on Midway, consult the RCC [Software](../software/index.md) documentation page.
+All users can install software packages privately in their home and project directories in accordance with the [Terms of Use](../terms_of_use.md). Users can compile and install software while connected to the login nodes unless the process is time- or memory-consuming. In such cases, it is recommended to use **compute nodes**, however note that compute nodes do not have access to the internet. Please check our documentation on how to start and use a `sinteractive` session [here](../slurm/sinteractive.md). 
 
-For this tutorial, let us load `python`
+## Shared Software
 
-```
-module load python
-```
+RCC uses [Environment Modules](http://modules.sourceforge.net){:target='_blank'} for managing software packages and libraries that would otherwise conflict with one another. 
 
-which will load the default version of the `python/anaconda` module. You can do `module list` to see which version is just loaded.
-
-Suppose that you would like to install numpy, matplotlib and pandas for your calculations.  You should first create an environment in your own space and install these packages into this environment.  See [managing Python environments](../software/apps-and-envs/python.md) for more information.
-
-Since Python environments might contain many files and/or take a lot space, it is recommended that you create your environments somewhere outside your home folder such as `/project` or `/scratch`. Suppose that your PI has a space under `/project/[pi-folder]` and you have a folder under that location.
-
-```
-cd /project/[pi-folder]/[your-cnetid]
-python -m venv my-venv
-source ./my-venv/bin/activate
-pip install matplotlib numpy pandas
-```
-
-Note that the base environment of the default `python` module already has many popular packages installed, including the above 3 packages. You can also create an environment and install packages with `conda` or `mamba`.
-
-If you need to compile your software packages from source, you can download the software source code from GitHub to your space, load the compiler modules and build the codes. In this tutorial, let us build [LAMMPS](https://github.com/lammps/lammps) from source code:
-
-```
-cd /project/[pi-folder]/[your-cnetid]
-git clone https://github.com/lammps/lammps.git
-cd lammps
-mkdir build && cd build
-```
-
-Load the modules for the preferred compiler, MPI libraries and MKL, and cmake to configure the build:
-```
-module load mpich/3.4.3+gcc-10.2.0 mkl/2023.1 cmake/3.26
-cmake ../cmake -C ../cmake/presets/basic.cmake -DFFT=MKL -DFFTW3_INCLUDE_DIR=$MKLROOT/include/fftw
-```
-
-and finally build the code
-
-```
-make -j4
-```
-
-If the build succeeds, you will see a LAMMPS binary, namely `lmp`, generated under the folder `/project/[pi-folder]/[your-cnetid]/build`.
-
-You can use other compilers (Intel oneAPI, GNU GCC) and MPI libraries (OpenMPI, MPICH). For GPU codes, you can use NVIDIA HPC SDK and Intel oneAPI. More information on the available development tools is given in [Compilers](../software/compilers.md). 
-
-
-# Software packages and compilers 
-
-The best way to view the latest software packages offered on RCC clusters is to check the list of available software modules with the `module avail` command.
-
-All users can install software packages privately in their home and project directories. It is recommended to use **compute nodes** rather than login nodes when compilation and installation processes are time-consuming and require significant resources. Please check our documentation on how to start and use a `sinteractive` session [here](../slurm/sinteractive.md). 
-
-## Loading and using available software modules
-
-RCC uses [Environment Modules](http://modules.sourceforge.net){:target='_blank'} for managing software. The modules system permits us to set up the shell environment to make running and compiling software easier. It also allows us to make available many software packages and libraries that would otherwise conflict with one another. 
-
-When you first log into RCC clusters, you will be entered into a basic user environment with minimal software available.  The `module` system is a script-based system used to manage the user environment and to `activate` software packages.  You must first load the corresponding software module to access software packages installed on RCC clusters. 
+When you first log into RCC clusters, you will be entered into a basic user environment with minimal software available. The `module` system is a script-based system used to manage the user environment and to `activate` software packages. You must first load the corresponding software module to access software packages installed on RCC clusters. 
 
 Basic `module` commands:
 
@@ -81,7 +28,7 @@ module use /software/modulefiles-amd
 module list
 ```
 
-### Requesting a software package installation 
+## Requesting a software package installation 
 If you need software not currently available in the module system and believe that multiple research groups can benefit from installing this software, send a detailed request to our [Help Desk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'} providing:
 
 1. Complete the name of the software package 

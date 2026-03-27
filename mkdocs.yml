@@ -121,7 +121,7 @@ nav:
     - Batch Jobs: slurm/sbatch.md 
     - FAQ: slurm/faq.md
   
-  - Policies: policies.md 
+  - Terms of Use: terms_of_use.md 
   - Glossary: glossary.md 
   - Mistakes: mistakes.md
   
