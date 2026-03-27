@@ -33,4 +33,4 @@ GM4, a GPU-enabled cluster, is part of the Midway2 ecosystem and facilitates mul
 ## [SDE Ecosystem](https://sde-midwayr.rcc.uchicago.edu/) 
 ### MidwayR3 & MidwayR2
 
-MidwayR3 and MidwayR2, within the Secure Data Enclave, provide secure computing environments for research on sensitive data. It features a setup similar to Midway but tailored for higher security and privacy standards than the UChicago baseline. 
+MidwayR3 and MidwayR2, within the Secure Data Enclave, provide trusted HPC environments for research on regulated data. 
