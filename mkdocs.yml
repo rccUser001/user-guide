@@ -111,13 +111,11 @@ nav:
   - "Tutorials":
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
-
-  - 'GIS':
-    - Basics: gis/index.md
-    - Geocoding: gis/geocoding.md
-    - Geospatial: gis/MidwayGeoSpatial.md
+    - GIS:
+      - Basics: gis/index.md
+      - Geocoding: gis/geocoding.md
+      - Geospatial: gis/MidwayGeoSpatial.md
   
- 
   - Terms of Use: terms_of_use.md 
   - Glossary: glossary.md 
   - Best Practices: mistakes.md
