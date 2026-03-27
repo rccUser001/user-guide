@@ -8,7 +8,7 @@ sinteractive -A [pi-account] -p [partition] -N [# of nodes] --ntasks-per-node=[#
 ```
 
 !!! note
-    On Midway3, you **always** need to specify the account to be charged for the job explicitly. Slurm will use the default [partition](../partitions.md) (Midway2: `broadwl`, Midway3: `caslake`) if you do not specify it.
+    On Midway3, you **always** need to specify the account to be charged for the job explicitly. Slurm will use the default partition (Midway2: `broadwl`, Midway3: `caslake`) if you do not specify it.
 
 !!! note
     On Midway3, to use the partitions with AMD CPUs, it is recommended that you log in to the `midway3-amd.rcc.uchicago.edu` login node and submit jobs from this login node. 

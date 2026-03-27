@@ -36,7 +36,7 @@ nav:
   - Allocations: allocations.md 
 
   - Connection: 
-    - Overview: connection/connecting.md
+    - Overview: connection/main.md
     - 'SSH': connection/ssh/main.md 
     - 'Open OnDemand': connection/open_ondemand/open_ondemand.md
     - 'ThinLinc': 
@@ -45,7 +45,7 @@ nav:
     - Globus: connection/globus/access-files.md
   
   - 'Data Transfer':
-    - SFTP Clients: data_transfer/sftp/clients.md
+    # - SFTP Clients: data_transfer/sftp/clients.md
     - Globus: data_transfer/globus/transfer-files.md
     - SAMBA: data_transfer/persistent_mapping/samba.md
     - CLI: data_transfer/cli/cli.md
@@ -69,7 +69,7 @@ nav:
 
   - 'Computing': 
     - Scheduler: slurm/main.md
-    - Partitions: partitions.md
+    - Partitions: slurm/partitions.md
     - Interactive Jobs: slurm/sinteractive.md
     - Batch Jobs: slurm/sbatch.md 
     - FAQ: slurm/faq.md
@@ -112,11 +112,10 @@ nav:
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
     - GIS:
-      - Basics: gis/index.md
-      - Geocoding: gis/geocoding.md
-      - Geospatial: gis/MidwayGeoSpatial.md
+      - Basics: tutorials/gis/index.md
+      - Geocoding: tutorials/gis/geocoding.md
+      - Geospatial: tutorials/gis/MidwayGeoSpatial.md
   
-  - Terms of Use: terms_of_use.md 
   - Glossary: glossary.md 
   - Best Practices: mistakes.md
   

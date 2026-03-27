@@ -1,6 +1,6 @@
 # SSH (Secure shell)
 
-Advanced users often interact with HPC systems using the command-line interface (CLI). To establish a remote connection to a Midway HPC cluster, Mac/Linux users can use the Terminal app, while Windows users can run PowerShell app. Users running Windows version older than Windows 10’s April 2018 release will need to download a 3rd party SSH client. We recommend a free version of [Termius](https://termius.com/download/){:target='_blank'} SSH client. See [Advanced SSH options](./advance.md) to read more about different arguments you can add to your SSH commands.
+Advanced users often interact with HPC systems using the command-line interface (CLI). To establish a remote connection to a Midway HPC cluster, Mac/Linux users can use the Terminal app, while Windows users can run PowerShell app. Users running Windows version older than Windows 10’s April 2018 release will need to download a 3rd party SSH client. We recommend a free version of [Termius](https://termius.com/download/){:target='_blank'} SSH client. 
 
 <p align="center">
 <img src="/img/ssh/ssh-fig-002.jpg" width="650" />
@@ -16,7 +16,7 @@ Where `hostname` is the address of the cluster's login node (see below). It is a
     ssh -Y <CNetID>@midway3.rcc.uchicago.edu
     ```
 
-??? note "Note for macOS users"
+!!! warning "Note for macOS users"
     The program XQuartz is required to enable trusted X11 forwarding on a Mac.
     
 ### Hostnames
@@ -48,7 +48,7 @@ Each cluster has multiple login nodes to distribute the workload across all user
 Some 3d-party clients allow you to store your credentials locally in the encrypted form so that you don't need to type them upon each connection. Install MobaXTerm SSH client is installed on your local machine. Launch the MobaXterm client and click on the Sessions icon at the upper left-hand corner of the client. Then, perform the following numbered steps, illustrated in the figure below, to establish a connection to RCC clusters. 
 
 1. Click the SSH tab to expand the SSH login options.
-2. In the Remote host field input, please check [this table](./main.md#SSH-host-addresses) for the cluster's host address. 
+2. In the Remote host field enter the hostname. 
 3. Select the Specify username button and input your CNetID
 4.  Proceed to log in by clicking the OK button. 
 

@@ -40,7 +40,9 @@ The flowchart below illustrates the main steps in that process.
 </p> 
 
 There are two main ways to run programs on RCC clusters: 
+
 * [Running jobs on RCC compute nodes through `sinteractive` (active) ](./sinteractive.md)
+
 * [Submitting jobs to RCC compute nodes through `sbatch` (passive) ](./sbatch.md)
 
 
@@ -56,7 +58,7 @@ You can submit more than one interactive and batch jobs simultaneously. However,
      You can use the command ```scontrol show config``` to see the default values of the requested resource that Slurm will use for an interactive or batch job.
 
 ## Job limits (QoS)
-To distribute computational resources fairly, the RCC limits the computing resources users request. These limits are enforced by the QoS (Quality of Service) assigned to each partition. A QoS is a set of parameters (e.g., MaxNodes, MaxCPUs, MaxWall, etc.) Read more about these regulations on our [partitions](../partitions.md#shared-partition-qos) page. 
+To distribute computational resources fairly, the RCC limits the computing resources users request. These limits are enforced by the QoS (Quality of Service) assigned to each partition. A QoS is a set of parameters (e.g., MaxNodes, MaxCPUs, MaxWall, etc). 
 
 Groups participating in the cluster partnership program (CPP) may customize resource limits for their partitions. 
 

@@ -98,7 +98,7 @@ As part of the University of Chicago's commitment to GIS education, RCC-GIS prov
 If you have questions about how GIS can enhance your research or need assistance on how to begin, reach out to the RCC-GIS team for customized support suited to your requirements and expertise. The RCC-GIS promotes interdisciplinary research and education, assisting UChicago users in incorporating GIS techniques and software across various fields.
 
 Sources
-[1] gis.rcc.uchicago.edu https://gis.rcc.uchicago.edu
+[1] [gis.rcc.uchicago.edu](https://gis.rcc.uchicago.edu)
 
 
 For more information on general RCC-GIS services, visit our [main GIS portal](https://gis.rcc.uchicago.edu).

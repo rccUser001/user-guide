@@ -37,7 +37,7 @@ You can create your own folders, upload data, write and compile codes, prepare j
 
 Skyway provides compiled software packages (i.e. `modules`) that you can load to build your codes or run your jobs. The list of the modules is given in the [Skyway](https://cloud-skyway.rcc.uchicago.edu/){:target='_blank'} home page.
 
-You submit jobs to SLURM in a similar manner to what do on [Midway](slurm/main.md). The difference is that you should specify different partitions and accounts corresponding to the cloud services you have access to (e.g. AWS or GCP). Additionally, the instance configuration should be specified via `--constraint`.
+You submit jobs to SLURM in a similar manner to what do on [Midway](../../slurm/main.md). The difference is that you should specify different partitions and accounts corresponding to the cloud services you have access to (e.g. AWS or GCP). Additionally, the instance configuration should be specified via `--constraint`.
 
 
 ## Troubleshooting

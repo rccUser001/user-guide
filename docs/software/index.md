@@ -1,6 +1,6 @@
 ## Private Software 
 
-All users can install software packages privately in their home and project directories in accordance with the [Terms of Use](../terms_of_use.md). Users can compile and install software while connected to the login nodes unless the process is time- or memory-consuming. In such cases, it is recommended to use **compute nodes**, however note that compute nodes do not have access to the internet. Please check our documentation on how to start and use a `sinteractive` session [here](../slurm/sinteractive.md). 
+All users can install software packages privately in their home and project directories in accordance with the [RCC Terms of Use](https://rcc.uchicago.edu/about-rcc/rcc-user-policy). Users can compile and install software while connected to the login nodes unless the process is time- or memory-consuming. In such cases, it is recommended to use **compute nodes**, however note that compute nodes do not have access to the internet. Please check our documentation on how to start and use a `sinteractive` session [here](../slurm/sinteractive.md). 
 
 ## Shared Software
 
@@ -22,7 +22,7 @@ Basic `module` commands:
     Note that some modules require other specific modules, i.e., dependencies, to be loaded (or unloaded). If there is a conflict, you must explicitly unload the conflicting module (`module unload ...`), then load the desired module again. In certain cases, usually with loading an out-of-date module, you may get an error such as `Error: Requirement...` if a dependency is absent. In those situations, you can try `module load -f <module>` to force the module to load.
 
 !!! note "Note on software for AMD CPUs" 
-    For the `amd` [partitions](../partitions.md) on Midway3, you need the software modules built specifically for AMD CPUs.
+    For the `amd` partitions on Midway3, you need the software modules built specifically for AMD CPUs.
 ```
 module use /software/modulefiles-amd
 module list
