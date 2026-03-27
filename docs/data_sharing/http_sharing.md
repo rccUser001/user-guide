@@ -9,7 +9,7 @@ RCC provides web access to data on their storage system via public_html director
 |----------------------------------------------|-----------------------------------------------------------|
 | /home/[your_CNetID]/public_html/research.dat | http://users.rcc.uchicago.edu/~[your_CNetID]/research.dat |
 
-Ensure your home directory and `public_html` have the execute [permissions](ssh/advance.md/#Data-sharing). If the folder `public_html` does not exist, create it. 
+Ensure your home directory and `public_html` have the execute [permissions](data_management/access_control.md/#Data-sharing). If the folder `public_html` does not exist, create it. 
 Optionally, ensure public_html has read permissions if you would like to allow indexing.
 
 You may set these permissions using the following commands:
@@ -28,4 +28,4 @@ chmod o+r $HOME/public_html/research.dat
 ```
 
 !!! note
-    Use of these directories must conform with the [RCC usage policy](https://rcc.uchicago.edu/about-rcc/rcc-user-policy). Please notify RCC if you expect a large number of people to access data hosted here.
+    Use of these directories must conform with the [RCC Terms of Use](https://rcc.uchicago.edu/about-rcc/rcc-user-policy). Please notify RCC if you expect a large number of people to access data hosted here.

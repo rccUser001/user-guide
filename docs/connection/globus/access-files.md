@@ -75,7 +75,7 @@ alt='Globus web app open to the File Manager. "University of Chicago Research Co
 To see files in different collections at the same time, click the two panes icon next to Panels in the upper-right corner. 
 
 <p align='center'>
-<img src='../../img/globus/two-panes.png'
+<img src='/img/globus/two-panes.png'
 width='650'
 alt='Globus File Manager in two-pane mode with Midway2 files in the left pane and Midway3 files in the right pane.'/>
 </p>

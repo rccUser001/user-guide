@@ -31,27 +31,22 @@ extra_css:
 
 nav:
   - Home: 'index.md' 
-  - Accounts: accounts.md 
   - Ecosystems: ecosystems.md 
+  - Accounts: accounts.md 
   - Allocations: allocations.md 
 
   - Connection: 
     - Overview: connection/connecting.md
+    - 'SSH': connection/ssh/main.md 
     - 'Open OnDemand': connection/open_ondemand/open_ondemand.md
-    - 'SSH': 
-      - Basics: connection/ssh/main.md 
-      - Advanced: connection/ssh/advance.md 
-      - FAQ: connection/ssh/faq.md
     - 'ThinLinc': 
       - Basics: connection/thinlinc/main.md
       - Troubleshooting: connection/thinlinc/troubleshooting.md
+    - Globus: connection/globus/access-files.md
   
   - 'Data Transfer':
     - SFTP Clients: data_transfer/sftp/clients.md
-    - Globus: 
-      - Access Files: data_transfer/globus/access-files.md
-      - Transfer Files: data_transfer/globus/transfer-files.md
-      - Share Files: data_transfer/globus/share-files.md
+    - Globus: data_transfer/globus/transfer-files.md
     - SAMBA: data_transfer/persistent_mapping/samba.md
     - CLI: data_transfer/cli/cli.md
     - Cloud:
@@ -59,12 +54,31 @@ nav:
       # - RClone: data_transfer/cloud/rclone.md
       # - Globus: data_transfer/cloud/cloud-sync.md
 
+  - Data Sharing: 
+    - Filesystems: data_sharing/access_control.md
+    - Globus: data_sharing/globus_sharing.md
+    - Web Hosting: data_sharing/http_sharing.md
+    - Datasets: 
+      - AlphaFold: data_sharing/databases/alphafold.md
+      - BFI: data_sharing/databases/bfi.md
+      - Booth: data_sharing/databases/booth.md
+
   - 'Storage': 
     - Basics: storage/main.md 
     - FAQ: storage/faq.md
 
+  - 'Computing': 
+    - Scheduler: slurm/main.md
+    - Partitions: partitions.md
+    - Interactive Jobs: slurm/sinteractive.md
+    - Batch Jobs: slurm/sbatch.md 
+    - FAQ: slurm/faq.md
+
   - 'Software':
     - Overview: software/index.md
+    - Compilers: software/compilers.md
+    - Libraries: software/libraries.md
+    - Developer Tools: software/dev-tools.md
     - Commonly Used:
       - Alphafold: software/apps-and-envs/alphafold.md
       - CryoSPARC: software/apps-and-envs/cryosparc.md
@@ -94,17 +108,6 @@ nav:
         - API: software/apps-and-envs/scode/api.md
     - FAQ: software/faq.md
 
-  - 'Compiling':
-    - Compilers: software/compilers.md
-    - Libraries: software/libraries.md
-    - CMake: software/cmake.md
-    - Developer Tools: software/dev-tools.md
-
-  - 'Databases': 
-    - AlphaFold: databases/alphafold.md
-    - BFI: databases/bfi.md
-    - Booth: databases/booth.md
- 
   - "Tutorials":
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
@@ -114,16 +117,10 @@ nav:
     - Geocoding: gis/geocoding.md
     - Geospatial: gis/MidwayGeoSpatial.md
   
-  - 'Computing': 
-    - Scheduler: slurm/main.md
-    - Partitions: partitions.md
-    - Interactive Jobs: slurm/sinteractive.md
-    - Batch Jobs: slurm/sbatch.md 
-    - FAQ: slurm/faq.md
-  
+ 
   - Terms of Use: terms_of_use.md 
   - Glossary: glossary.md 
-  - Mistakes: mistakes.md
+  - Best Practices: mistakes.md
   
   - "MidwayR3":
     - Overview: midwayR3/overview.md

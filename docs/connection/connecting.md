@@ -17,26 +17,12 @@ There are six methods to access RCC resources. The following table provides a su
 
 |  <div style="width:150px">Connection Method | Description | Access to Compute Nodes | Data Transfer | Data Sharing |  
 | ------------------------------------------- | ----------- | ------- | ------------- | ------------ | 
-| [Secure Shell (SSH)](../ssh/main.md)  | Can be used to access data and software packages | Yes | Yes (two-way) | RCC Internal |
+| [SSH](../ssh/main.md)  | Can be used to access data and software packages | Yes | Yes (two-way) | RCC Internal |
 | [ThinLinc](../thinlinc/main.md) | A remote desktop to access data and software packages | Yes | Yes (two-way) | RCC Internal |
 | [Open OnDemand](../open_ondemand/open_ondemand.md) | A web-based portal used to access data and software packages | Yes | Yes (two-way) | RCC Internal + Globus |
-|[SAMBA (SMB)](../samba.md)| Can be used to access data | No | Yes (two-way) | No |
+|[SAMBA](../samba.md)| Can be used to access data | No | Yes (two-way) | No |
 |[Globus](../globus/access-files.md)| Can be used to access and share data and scheduled data transfers | No | Yes (two-way) | External and RCC collaborators |
-|[HTTP](../http.md)| Can be used to share data for public access (legacy service) | No | Yes (one-way) | Public |
 
-## SSH/SFTP
 
- Here you will use [Secure Shell (SSH)](../ssh/main.md) to connect to the login node from your local machine. 
 
- ```
-ssh [your-cnetid]@midway3.rcc.uchicago.edu
-```
-
-After putting in your password, you will choose an option to accept a push on the Duo app. If successful, you will land on your home folder on the Midway3 login node as shown at the command prompt `[your-cnetid]@midway3-login3` or `[your-cnetid]@midway3-login4`.
-
-You can check where the present working directory by running the command `pwd`:
-
-```
-pwd
-```
 

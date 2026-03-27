@@ -1,23 +1,5 @@
-# Advanced SSH options
-
-* File sharing: 
-	
-	Sharing files within the RCC clusters ecosystem using the command line and understanding file/folder permissions and data privacy. 
-	
-* Helpful SSH arguments (X11 forwarding, etc.) 
-* Advanced access control via ACL
-
-
-## <a name="X11-forwarding"></a> X11 forwarding
-X11 forwarding is a mechanism that allows you to forward a remote application's display (from clusters) to your local machine (client). To enable X11 forwarding when connecting to an RCC cluster system through SSH, the `-Y` flag should be included, for example: 
-    ```
-    ssh -Y <CNetID>@midway3.rcc.uchicago.edu
-    ```
-
-??? note "Note for macOS users"
-    The program XQuartz is required to enable trusted X11 forwarding on a Mac.
-    
-## File permissions and ownership
+# Access Control
+## File Permissions and Ownership
 
 Linux divides file permissions into read (`r`), write (`w`), and execute (`x`) permission categories. 
 
@@ -57,10 +39,9 @@ Here is how we interpret the symbols on the left. First, we break it into four p
 * `r-- (part 3)` means others who are not even part of the group also can read this file. 
 
 <p align="center">
-<img src="../../img/Files-permissions-and-ownership-basics-in-Linux.png" width="400" />
+<img src="/img/Files-permissions-and-ownership-basics-in-Linux.png" width="400" />
 </p> 
 
-### Data sharing
 To set up user permissions to a folder recursively, you can run the following command in the absolute mode, providing three [permission bits](https://www.guru99.com/file-permissions.html#absolute_mode_in_linux){:target='_blank'} for the User (7), Group (5), and Others (5): 
 ```
 $ chmod -R 755 myfolder
@@ -128,26 +109,7 @@ $ ls -l myfolder
 !!! warning Locked out
       If you need our help to overwrite the file permission of a directory, please reach out to us. Remember, the account owner can ask for this only for files under `/home` and `/scratch`; only PIs can request this for files under their group-shared directories. 
 
-   
-## Advanced access control via ACL
-!!! note
-      ACL is only available on Midway2.
-
-Access control list [(ACL)](https://www.redhat.com/sysadmin/linux-access-control-lists){:target='_blank'} provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions to any disk resource for any user or group. For more information, please visit the ACL manual <a href='https://wiki.archlinux.org/index.php/' target='_blank'>here</a>.
-
-
-The default Linux file permission management covered in the previous section only supports the permissions at the owner/group/others level. ACL provides more precise control over any data (files or directories) customizable for individual users or groups. Before applying ACL to your data, please read and understand the following caveats. 
-
-* By default, no ACL is set for user data. ACL provides a highly flexible permission control but also increases user access and management complexity. PIs normally want to share an entire project folder with all group members; for this, the Linux-based permissions are enough. We suggest that users implement ACL controls only when necessary. One example is to protect confidential data in the project space by allowing only certain users to access confidential directories or files.
-
-
-* After ACL is set, Linux-based and ACL permissions will work together as a dual-guard system. The final effective access to data is granted only if permitted by both mechanisms. For example, if a folder is group-accessible to a user by Linux-based permission but restricted by ACL, the user cannot access this folder.
-
-
-* Be sure you have enough knowledge setting up access via Linux-based permissions and ACL, i.e., you understand what “users”, “groups,” and each attribute in `rwx` mean and how to use them. Otherwise, please [contact our Help Desk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'} for assistance managing your data access. We are here and happy to help you set up the permissions to keep your data safe and accessible as required.
-
-
-### <a name="Data-sharing"></a> Sharing folders with a user within a group
+## Sharing Data with a Group Member
 Suppose there is a folder tree as below, and you want to allow the folder `my_folder` to be accessible by the user `drwho` only, and `drwho` is already a member of your group `drpepper`:
 
 ```default
@@ -209,7 +171,7 @@ To clean up (remove) all ACL controls to the folder:
 $ setfacl -b my_folder
 ```
 
-### Sharing folders with a user outside a group
+## Sharing Data with a Collaborator
 
 Suppose you would like to share your folder `/project2/drpepper/my_own_folder/shared_data` with another RCC user with CNetID `drj`, who is not in your group `pi-drpepper`. As the folder owner, you can execute the following two commands.
 ```
@@ -218,49 +180,17 @@ setfacl -m u:drj:--x /project2/drpepper/my_own_folder
 ```
 The first command changes the ACL permission of the folder (and recursively its sub-folders and files) to allow the user `drj` to read and write. The second command adds execute permission to `drj` so that `drj` can access the parent folder `/project2/drpepper/my_own_folder` without read or write permissions. 
 
-## MobaXterm
-
-Once the MobaXterm client is installed on your local machine, open the MobaXterm client and click on the Sessions icon at the upper left-hand corner of the client. Then, perform the following numbered steps, illustrated in the figure below, to establish a connection to RCC clusters. 
-
-1. Click the SSH tab to expand the SSH login options.
-2. In the Remote host field input, please check [this table](./main.md#SSH-host-addresses) for the cluster's host address. 
-3. Select the Specify username button and input your CNetID
-4.  Proceed to log in by clicking the OK button. 
+   
+## Advanced Access Control via ACL
+Access control list [(ACL)](https://www.redhat.com/sysadmin/linux-access-control-lists){:target='_blank'} provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions to any disk resource for any user or group. For more information, please visit the ACL manual <a href='https://wiki.archlinux.org/index.php/' target='_blank'>here</a>.
 
 
-<p align="center">
-<img src="../../img/ssh/ssh-fig-005.png" width="600" />
-</p> 
+The default Linux file permission management covered in the previous section only supports the permissions at the owner/group/others level. ACL provides more precise control over any data (files or directories) customizable for individual users or groups. Before applying ACL to your data, please read and understand the following caveats. 
 
-Provide your CNetID password when prompted for a password. A Duo two-factor authentication window will then pop up, requesting you select from the 2FA options to authenticate.
+* By default, no ACL is set for user data. ACL provides a highly flexible permission control but also increases user access and management complexity. PIs normally want to share an entire project folder with all group members; for this, the Linux-based permissions are enough. We suggest that users implement ACL controls only when necessary. One example is to protect confidential data in the project space by allowing only certain users to access confidential directories or files.
 
-<p align="center">
-<img src="../../img/ssh/ssh-fig-006.png" width="400" />
-</p> 
 
-## SSH Key Pairing
-ONLY members of the `pi-lgrandi` group (for the <a href='https://github.com/XENONnT' target='_blank'>XENON experiment</a>) can use SSH key pairing to connect to RCC servers.
+* After ACL is set, Linux-based and ACL permissions will work together as a dual-guard system. The final effective access to data is granted only if permitted by both mechanisms. For example, if a folder is group-accessible to a user by Linux-based permission but restricted by ACL, the user cannot access this folder.
 
-To set up SSH key pairing:
 
-**1. Create your public key:** Run the following command on your computer to generate a public key. (Replace `<cnetid>` with your CNetID.) Be sure you are **not** connected to an RCC server when you run the command; you want your public key associated with your **local system**, so RCC login nodes can use it to recognize your computer.
-
-```
-ssh-keygen -f ~/.ssh/<cnetid> -t rsa -b 4096
-```
-
-When you run this command in your shell (Mac terminal, Windows PowerShell, etc.), you will get a message specifying where your key has been saved. For example:
-
-```
-Your identification has been saved in /Users/<local-user>/.ssh/<cnetid>
-Your public key has been saved in /Users/<local-user>/.ssh/<cnetid>.pub
-```
-Note that the `.` in `.ssh` indicates a hidden folder, so you will need to show hidden items to see your `<cnetid>.pub` file. You can do this from your shell (run `ls -la`) or your file explorer (press `command` + `shift` + `.` on Mac or select View > Hidden items on Windows).
-
-**2. Share your public key:** Now that you have generated your public key, share it with the RCC so we can add it to our login nodes. Send <a href=mailto:'help@rcc.uchicago.edu'>help@rcc.uchicago.edu</a> an email with the following information:
-
-* Your CNetID
-* Your public key (attach your `<cnet>.pub` file to the email OR copy/paste the contents of the file into the body of the email)
-* Which RCC cluster you would like to connect to with SSH key pairing: Midway2, Midway3, or DaLI
-
-An RCC staff member will add your public key to the appropriate login nodes.
+* Be sure you have enough knowledge setting up access via Linux-based permissions and ACL, i.e., you understand what “users”, “groups,” and each attribute in `rwx` mean and how to use them. Otherwise, please [contact our Help Desk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'} for assistance managing your data access. We are here and happy to help you set up the permissions to keep your data safe and accessible as required.
