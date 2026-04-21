@@ -43,7 +43,7 @@ nav:
     - Mistakes: 101/mistakes.md
 
   - 'Storage': 
-    - Basics: storage/main.md 
+    - Basics: storage/main.md
     - FAQ: storage/faq.md
 
   - Partitions: partitions.md
@@ -132,6 +132,10 @@ nav:
     - Data transfer: midwayR3/data-transfer.md
     - Running jobs: midwayR3/running-jobs.md
     - Partitions: midwayR3/partitions.md
+
+  - Beagle3: beagle3-overview.md
+
+  - SHARED: shared.md
 
 extra:
   analytics:
