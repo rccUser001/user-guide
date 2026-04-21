@@ -34,6 +34,19 @@ Please note:
 
 Data can be transferred between `/shared` and other [storage spaces](storage/main.md) in the Midway ecosystem using command line interface tools such as `cp`, `scp`, `rsync` and `rclone`.
 
+### Backup
+
+There are daily and weekly snapshots of `/shared` taken automatically daily and weekly under the
+directory `/shared/.snap`. Each snapshot is timestamped and named such as:
+
+```
+scheduled-2026-04-20-20_00_00_UTC
+```
+
+Users can find their data under the corresponding PI folders within each snapshot.
+
+The retention policy is to keep the last 7 daily snapshots, and the last 4 weekly snapshots.
+
 ## Troubleshooting
 
 For further assistance, please send an email to [shared@rcc.uchicago.edu](mailto:shared@rcc.uchicago.edu) and [contact our Help Desk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target="_blank"}
