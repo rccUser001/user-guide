@@ -27,7 +27,7 @@ Open OnDemand is designed to lower the barrier to HPC usage for both new and exp
 To access the RCC Open OnDemand service:
 
 1.  Open your favorite web browser (Chrome, Firefox, Safari, or Edge are recommended).
-2.  Navigate to `https://midway3-ondemand.rcc.uchicago.edu` using on-campus networks or [cVPN](https://uchicago.service-now.com/esc/escservices@uchicago.edu?id=kb_article&sys_id=9f963146330f2a9080866cdfcd5c7b68&spa=1).
+2.  Navigate to [https://midway3-ondemand.rcc.uchicago.edu](https://midway3-ondemand.rcc.uchicago.edu) using on-campus networks or [cVPN](https://uchicago.service-now.com/esc/escservices@uchicago.edu?id=kb_article&sys_id=9f963146330f2a9080866cdfcd5c7b68&spa=1).
 3.  You will be prompted to log in with your CNetID and password.
 
 ![Open OnDemand login screen with CNetID and password fields](images/login_ondemand_screen.jpeg)
