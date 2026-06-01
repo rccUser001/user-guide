@@ -50,7 +50,6 @@ nav:
     - SAMBA: data_transfer/persistent_mapping/samba.md
     - CLI: data_transfer/cli/cli.md
     - Cloud:
-      - Skyway: data_transfer/cloud/skyway-overview.md
       # - RClone: data_transfer/cloud/rclone.md
       # - Globus: data_transfer/cloud/cloud-sync.md
 
