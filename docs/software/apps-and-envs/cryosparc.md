@@ -20,7 +20,7 @@ After receiving your license information, RCC will configure your account and pr
 CryoSPARC's graphical user interface can be accessed through:
 
 1. Your local machine's web browser (recommended for better performance)
-2. [Thinlinc](../../thinlinc/main.md) 
+2. [Thinlinc](../../connection/thinlinc/main.md) 
 
 ### Initial Setup
 

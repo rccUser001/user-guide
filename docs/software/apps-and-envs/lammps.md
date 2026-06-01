@@ -201,6 +201,6 @@ After saving the file (Ctrl+X with `nano`, `:x` with `vi`), you will submit the 
 sbatch batch_job_lammps.txt
 ```
 
-As you can see, you can submit more than one jobs at a time. The more resource you request (number of nodes, number of tasks per node, memory per node, walltime and so on), the longer the jobs are pending.  Your usage history also affects how soon your jobs get running.  See [Running Jobs on Midway](../slurm/main.md) for detailed documentation on how to monitor the submitted jobs.
+As you can see, you can submit more than one jobs at a time. The more resource you request (number of nodes, number of tasks per node, memory per node, walltime and so on), the longer the jobs are pending.  Your usage history also affects how soon your jobs get running.  See [Running Jobs on Midway](../../slurm/main.md) for detailed documentation on how to monitor the submitted jobs.
 
 You can check the generated output `output.pdf` and `log.lammps` in the corresponding directories.

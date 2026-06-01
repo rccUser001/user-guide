@@ -98,7 +98,7 @@ scode serve-web -- --account <pi-account> --time 01:00:00 --partition caslake --
 ```
 
 - `<pi-account>`: Replace this with the name of your Principal Investigator (PI) or course account. This account will be used to provision compute nodes in the specified partition.
-- To view the accounts you are associated with and check available allocations, use `groups`, `accounts list` and `accounts balance`. Refer to the documentation for [`groups`](../../../partitions.md#what-partitions-i-can-use) and [`accounts`](../../../101/allocations.md#how-do-i-check-how-many-service-units-i-have-remaining-on-my-allocation) commandline utilities for more details.
+- To view the accounts you are associated with and check available allocations, use `groups`, `accounts list` and `accounts balance`. 
 - Additional slurm options can be added to the `scode serve-web` command **after the standalone `--` separator**. Refer to [Slurm User Guide](../../../slurm/sbatch.md) and [Sbatch Documentation](https://slurm.schedmd.com/sbatch.html) for more details on job submission options.
 
 This command will:

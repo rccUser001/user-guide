@@ -20,7 +20,7 @@ There are different services and gateways for the members of the grant PIs to ac
 
 * Mount point in the Midway3 login nodes `/shared`
 * Mount point in the Midway2 and DaLI login nodes `/shared`
-* [Globus](globus/share-files.md) collection `UChicago RCC SHARED`
+* [Globus](data_sharing/globus-sharing.md) collection `UChicago RCC SHARED`
 * [SAMBA](samba.md) share: connecting to the following server using the username `ADLOCAL\[cnetid]`
      * Windows: `\\shared-smb.rcc.uchicago.edu\shared` 
      * MacOS: `smb://shared-smb.rcc.uchicago.edu/shared`
