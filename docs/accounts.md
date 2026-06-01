@@ -51,7 +51,7 @@ Absolutely! RCC can create CNetIDs for external collaborators. Dig into the deta
 
 ### How do I access RCC systems?
 
-Accessing RCC systems is a multi-faceted journey. Use an SSH client with enabled X11 forwarding or ThinLinc (remote desktop) for interactive access. Explore more details on [Accessing RCC resources](connecting.md). For file access, employ SCP, Globus Online, or SAMBA.
+Accessing RCC systems is a multi-faceted journey. Use an SSH client with enabled X11 forwarding or ThinLinc (remote desktop) for interactive access. Explore more details on [Accessing RCC resources](connection/main.md).
 
 ## Current RCC users 
 

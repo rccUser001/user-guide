@@ -1,7 +1,4 @@
 # Running jobs on RCC clusters
-
-This page describes core concepts for running programs on RCC clusters. 
-
 ## Service units, allocations, and accounts 
 All jobs running on RCC clusters compute nodes consume service units (SUs). In short, SUs measure the amount of computing resources (CPUs/GPUs/time) consumed on a compute cluster. 
 
@@ -16,7 +13,7 @@ Before running any job, you need to check if your account has any eligible alloc
 rcchelp balance
 ```
 
-If a pi-account has a negative balance, you can't charge it for SUs and thus can't run jobs on the shared partitions. More on allocations can be found at [Allocations](/allocations.md). 
+If a pi-account has a negative balance, you can't charge it for SUs and thus can't run jobs on the shared partitions. More on allocations can be found at [Allocations](../allocations.md). 
     
 ## Slurm Scheduler
 

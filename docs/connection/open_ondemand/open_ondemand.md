@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Open OnDemand (OOD) is designed to lower the barrier to HPC usage for both new and experienced users. It is a web-based portal that provides seamless, user-friendly access to High-Performance Computing (HPC). With OOD, you can manage files, submit and monitor jobs, and launch interactive applications such as Jupyter, RStudio, and graphical desktop sessions — all from your web browser, without needing to use the command line.
+Open OnDemand (OOD) is a web-based portal that provides seamless, user-friendly access to High-Performance Computing (HPC). With OOD, you can manage files, submit and monitor jobs, and launch interactive applications such as Jupyter, RStudio, and graphical desktop sessions — all from your web browser directly to the compute nodes, without needing to use the command line.
 
 ## Accessing Open OnDemand at the RCC
 

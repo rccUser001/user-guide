@@ -174,7 +174,7 @@ with:
     Never run `conda init` on Midway. It modifies your shell startup scripts and can break module behavior, non-interactive shells, and ThinLinc sessions. Use `source activate` instead of `conda activate`.
 
 ## Managing Environments
-Suppose that you would like to install numpy, matplotlib and pandas for your calculations. You should first create an environment in your own space and install these packages into this environment.  See [managing Python environments](../software/apps-and-envs/python.md) for more information.
+Suppose that you would like to install numpy, matplotlib and pandas for your calculations. You should first create an environment in your own space and install these packages into this environment.
 
 Since Python environments might contain many files and/or take a lot space, it is recommended that you create your environments somewhere outside your home folder such as `/project` or `/scratch`. Suppose that your PI has a space under `/project/[pi-folder]` and you have a folder under that location.
 

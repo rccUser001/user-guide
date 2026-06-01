@@ -166,7 +166,7 @@ The following tables outline a variety of job states and reason codes you may en
 | SUSPENDED	    | `S`	| A running job has been stopped with its cores released to other jobs.  |
 | STOPPED	    | `ST`	| A running job has been stopped with its cores retained.                |
 
-A full list of these Job State codes can be found in [Slurm’s documentation.](https://slurm.schedmd.com/squeue.html#lbAG){:target='_blank'}.
+A full list of these Job State codes can be found in [Slurm’s documentation](https://slurm.schedmd.com/squeue.html#lbAG){:target='_blank'}.
 
 ##### Job Reason Codes
 
@@ -189,7 +189,7 @@ A full list of these Job State codes can be found in [Slurm’s documentation.](
 | `Resources`	           | The job is waiting for resources to become available and will eventually run.                   |
 
 
-A full list of these Job Reason Codes can be found [in Slurm’s documentation.](https://slurm.schedmd.com/squeue.html#lbAF){:target='_blank'}
+A full list of these Job Reason Codes can be found [in Slurm’s documentation](https://slurm.schedmd.com/squeue.html#lbAF){:target='_blank'}.
 
 For more information, consult the command-line help by typing `squeue --help`, or visit the [official online documentation](https://slurm.schedmd.com/documentation.html){:target='_blank'}.
 

@@ -45,7 +45,7 @@ nav:
     - Globus: connection/globus/access-files.md
   
   - 'Data Transfer':
-    # - SFTP Clients: data_transfer/sftp/clients.md
+    # #TODO- SFTP Clients: data_transfer/sftp/clients.md
     - Globus: data_transfer/globus/transfer-files.md
     - SAMBA: data_transfer/persistent_mapping/samba.md
     - CLI: data_transfer/cli/cli.md

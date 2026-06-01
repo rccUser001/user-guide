@@ -12,5 +12,5 @@ The paths to these datasets are as follows:
 | AlphaFold 3    | `/software/alphafold3.0-el8-x86_64/databases`                       |
 | ColabFold      | `/software/colabfold-data`                                          |
 
-Please contact the RCC to request for updating the datasets when necessary.  Example uses of these datasets with AlphaFold can be found in [AlphaFold](../software/apps-and-envs/alphafold.md).
+Please contact the RCC to request for updating the datasets when necessary.  Example uses of these datasets with AlphaFold can be found in [AlphaFold](../../software/apps-and-envs/alphafold.md).
 

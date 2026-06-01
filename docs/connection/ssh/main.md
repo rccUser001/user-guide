@@ -1,6 +1,6 @@
-# SSH (Secure shell)
+# SSH (Secure Shell)
 
-Advanced users often interact with HPC systems using the command-line interface (CLI). To establish a remote connection to a Midway HPC cluster, Mac/Linux users can use the Terminal app, while Windows users can run PowerShell app. Users running Windows version older than Windows 10’s April 2018 release will need to download a 3rd party SSH client. We recommend a free version of [Termius](https://termius.com/download/){:target='_blank'} SSH client. 
+Advanced users often interact with HPC systems through the command-line interface (CLI). To connect to a Midway HPC cluster, use a terminal application such as Terminal (macOS/Linux), PowerShell (Windows), or another SSH client such as [Termius](https://termius.com/download/){:target='_blank'} or [MobaXTerm](https://mobaxterm.mobatek.net/). 
 
 <p align="center">
 <img src="/img/ssh/ssh-fig-002.jpg" width="650" />
@@ -24,7 +24,7 @@ Where `hostname` is the address of the cluster's login node (see below). It is a
 |---|---|---|---|
 | Midway2 | `midway2.rcc.uchicago.edu` | DaLI | `dali-login.rcc.uchicago.edu` | 
 | Midway3 | `midway3.rcc.uchicago.edu` | Beagle3 | `beagle3.rcc.uchicago.edu` |
-| Midway3-AMD | `midway3-amd.rcc.uchicago.edu` | SSD | `ssd.rcc.uchicago.edu` |  
+| Midway3-AMD | `midway3-amd.rcc.uchicago.edu` | MidwaySSD | `ssd.rcc.uchicago.edu` |  
 
 If this is your first time signing into a particular RCC cluster using your computer, the SSH client will ask, `Are you sure you want to continue connecting?`. Type `yes` and press the 'enter' button on your keyboard. Then, we get a prompt to enter our CNetID `password`. Note, as you type in your password, no character or other symbol will appear, but it is alright; type in your password and press `enter` on Windows or `return` on Apple keyboards. 
 Then, the Duo's multi-factor authentication (MFA) prompt asks a few questions. 
@@ -43,9 +43,9 @@ Each cluster has multiple login nodes to distribute the workload across all user
 !!! note
     In compliance with the University of Chicago security guidelines, 2FA is required with limited exceptions. If you believe you have a justifiable need for SSH key-based authentication (only PIs), please [contact our helpdesk](https://rcc.uchicago.edu/support-and-services/consulting-and-technical-support){:target='_blank'} and describe your situation. Once your request is received, the RCC security team will review it, and we will follow up with you as soon as possible. 
 
-### MobaXTerm
+### MobaXTerm (Windows only)
 
-Some 3d-party clients allow you to store your credentials locally in the encrypted form so that you don't need to type them upon each connection. Install MobaXTerm SSH client is installed on your local machine. Launch the MobaXterm client and click on the Sessions icon at the upper left-hand corner of the client. Then, perform the following numbered steps, illustrated in the figure below, to establish a connection to RCC clusters. 
+Launch the MobaXterm client and click on the Sessions icon at the upper left-hand corner of the client. Then, perform the following numbered steps, illustrated in the figure below, to establish a connection to RCC clusters. 
 
 1. Click the SSH tab to expand the SSH login options.
 2. In the Remote host field enter the hostname. 
@@ -65,11 +65,11 @@ Provide your CNetID password when prompted for a password. A Duo two-factor auth
 
 
 ## Compute nodes
-Unlike login nodes, compute nodes are designed to perform computationally intensive work and hove no Internet access. To perform calculations on the compute nodes, you need to submit batch or interactive jobs through the [Slurm scheduler](../../slurm/main.md). Once your job starts, you will be able to connect to the corresponding compute node. 
+Unlike login nodes, compute nodes are designed to perform computationally intensive work and have no Internet access. To perform calculations on the compute nodes, you need to submit batch or interactive jobs through the [Slurm scheduler](../../slurm/main.md). Once your job starts, you will be able to connect to the corresponding compute node. 
 
 
 ## SSH Key Pairing
-ONLY members of the `pi-lgrandi` group (for the <a href='https://github.com/XENONnT' target='_blank'>XENON experiment</a>) can use SSH key pairing to connect to RCC servers.
+Members of the `pi-lgrandi` group (for the <a href='https://github.com/XENONnT' target='_blank'>XENON experiment</a>) can use SSH key pairing to connect to RCC servers.
 
 To set up SSH key pairing:
 
@@ -79,13 +79,7 @@ To set up SSH key pairing:
 ssh-keygen -f ~/.ssh/<cnetid> -t rsa -b 4096
 ```
 
-When you run this command in your shell (Mac terminal, Windows PowerShell, etc.), you will get a message specifying where your key has been saved. For example:
-
-```
-Your identification has been saved in /Users/<local-user>/.ssh/<cnetid>
-Your public key has been saved in /Users/<local-user>/.ssh/<cnetid>.pub
-```
-Note that the `.` in `.ssh` indicates a hidden folder, so you will need to show hidden items to see your `<cnetid>.pub` file. You can do this from your shell (run `ls -la`) or your file explorer (press `command` + `shift` + `.` on Mac or select View > Hidden items on Windows).
+When you run this command in your shell (Mac terminal, Windows PowerShell, etc.), you will get a message specifying where your private and public keys have been saved. Note that the `.` in `.ssh` indicates a hidden folder, so you will need to show hidden items to see your pyblic key `<cnetid>.pub`. You can do this from your shell (run `ls -la`) or your file explorer (press `command` + `shift` + `.` on Mac or select View > Hidden items on Windows).
 
 **2. Share your public key:** Now that you have generated your public key, share it with the RCC so we can add it to our login nodes. Send <a href=mailto:'help@rcc.uchicago.edu'>help@rcc.uchicago.edu</a> an email with the following information:
 
@@ -96,12 +90,10 @@ Note that the `.` in `.ssh` indicates a hidden folder, so you will need to show 
 An RCC staff member will add your public key to the appropriate login nodes.
 
 ## FAQ
-### What login shells are supported and how do I change my default shell? "
-RCC supports the following shells:
+### What login shells are supported and how do I change my default shell?
+You can check the list of supported shells by:
 ```
-/bin/bash
-/bin/tcsh
-/bin/zsh
+cat /etc/shells
 ```
 Use this command to change your default shell:
 ``` 
@@ -114,13 +106,13 @@ It may take up to 30 minutes for that change to take effect.
 Yes. To use Mosh, first log in to Midway via SSH, and add the command module load mosh to your ```~/.bashrc``` (or ```~/.zshenv``` if you use zsh). Then, you can log in by entering the following command in a terminal window:
 
 === "Midway2"
-``` 
-mosh <CNetID>@midway2.rcc.uchicago.edu 
-```
-=== "Midway3"
-```
-mosh <CNetID>@midway3.rcc.uchicago.edu
-```  
+    ``` 
+    mosh <CNetID>@midway2.rcc.uchicago.edu 
+    ```
+===+ "Midway3"
+    ```
+    mosh <CNetID>@midway3.rcc.uchicago.edu
+    ```  
 
 ### Why am I getting “ssh_exchange_identification: read: Connection reset by peer” when I try to log in via SSH? "
 You can get this error if you incorrectly enter your password too many times. This is a security measure that is in place to limit the ability for malicious users to use brute force SSH attacks against our systems.
