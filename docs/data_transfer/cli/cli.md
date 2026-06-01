@@ -9,7 +9,7 @@ Example 1: Copy/synchronize folder ```tests``` from Midway3 to your current dire
 `sftp jdoe@midway3.rcc.uchicago.edu`
 
 #### Rsync 
-[Rsync](https://rsync.samba.org/) is a fast and versatile file transfer tool that keeps track of progress and the differences between the source and destination. There are many optimizations under the hood that make rsync tranfer files faster compared to ```scp```. More information on the ```rsync``` command can be found at [the rsync man page](https://www.unix.com/man-page/redhat/1/rsync/).
+[Rsync](https://rsync.samba.org/) is a fast and versatile file transfer tool that keeps track of progress and the differences between the source and destination. There are many optimizations under the hood that make rsync transfer files faster compared to ```scp```. More information on the ```rsync``` command can be found at [the rsync man page](https://www.unix.com/man-page/redhat/1/rsync/).
 
 Example 1: Copy/synchronize folder ```tests``` from Midway3 to your current directory
 
@@ -45,7 +45,7 @@ Example 2-a: Copying a directory (collection of files) from Jane's personal comp
 
 `scp -r tests jdoe@midway3.rcc.uchicago.edu:/project/drpepper/users/jdoe/`
 
-On MacOS, you need to add ```-O``` if there is no folder with the same name on the target server:
+On macOS, you need to add ```-O``` if there is no folder with the same name on the target server:
 
 `scp -O -r tests jdoe@midway3.rcc.uchicago.edu:/project/drpepper/users/jdoe/`
 

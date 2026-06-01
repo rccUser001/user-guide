@@ -68,14 +68,13 @@ Embrace multiple affiliations! Both general users and PIs can join multiple pi-a
 To explore your group memberships, log into any Midway ecosystems login nodes through `SSH` and type `groups`.
 
 ## Leaving UChicago 
+### Will I still have access to my RCC account after leaving the University?
+
+Typically, UChicago IT will terminate your CNetID a few months after you leave.
 
 ### What if my CNetID password doesn't work after leaving the university?
 
 If you've left the university and can't log in, contact our Help Desk to request re-enabling access to your account.  To reenable your CNetID, you will need to request an [RCC account extension](https://rcc.uchicago.edu/accounts-allocations/account-extension-request){:target='_blank'}.  
-
-### Will I still have access to my RCC account after leaving the University?
-
-Typically, UChicago IT will terminate your CNetID a few months after you leave. To keey using Midway clusters, request an [RCC account extension](https://rcc.uchicago.edu/accounts-allocations/account-extension-request){:target='_blank'}.
 
 ### What to Do After Completing a Project
 

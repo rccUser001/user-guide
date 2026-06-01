@@ -65,7 +65,7 @@ sinteractive --partition=bigmem --ntasks=1 --cpus-per-task=8 --mem=128G --accoun
 ```
 
 
-Once you are connected to the compute node where the interactive sessions is runnnig, you can load python:
+Once you are connected to the compute node where the interactive session is runnnig, you can load python:
 ```
 module load python
 ```
