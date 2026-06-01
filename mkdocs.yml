@@ -127,8 +127,6 @@ nav:
     - Running jobs: midwayR3/running-jobs.md
     - Partitions: midwayR3/partitions.md
 
-  - Beagle3: beagle3-overview.md
-
   - SHARED: shared.md
 
 extra:

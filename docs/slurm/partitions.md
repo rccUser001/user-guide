@@ -127,6 +127,12 @@ rcchelp qos
     | `amd`     | 64                 | 128               | 200               | 36 H          |
 
 
+=== "Beagle3 QoS - Dedicated"
+    | Partition | Max Nodes/User | Max CPUs/User | Max Jobs/User | Max Wall Time |
+    |-----------|----------------|---------------|-------------------|---------------|
+    | `beagle3` | 8            | 256           | 12                | 48 H          |
+    | `beagle3-long`| 8       | 128           | 12                | 96 H          |
+
 === "MidwaySSD QoS - Dedicated"
 
     | Partition | Max Nodes/User | Max CPUs/User | Max Jobs/User | Max Wall Time | AllowAccount | QoS     |
