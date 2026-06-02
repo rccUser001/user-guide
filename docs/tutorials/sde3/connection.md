@@ -1,14 +1,10 @@
-## Quick Overview:
-Because MidwayR3 has no connection to the Internet, accessing MidwayR3 is a two-step process where you first connect to the Secure Data Enclave (SDE) Desktop using the Azure Virtual Desktop (AVD) client and then log into MidwayR3.<br><br>
+# Connection
+The SDE3 system is accessed over the end-to-end encrypted network. Users first establish a connection to the SDE Desktop and then authenticate to SDE3 from within the SDE Desktop. The SDE Desktop serves as a secure Windows-based gateway to the Linux-based SDE3 HPC environment. Data cannot be transferred directly from SDE3 to end-user devices.<br><br>
 
-![Screenshot showing MidwayR3 general connection](images/midwayR3_connection.png){ width="1000" }
+![Screenshot showing SDE3 general connection](images/connection.png){ width="1000" }
 
-* You do not need to be connected to the University VPN before connecting to MidwayR. Azure takes care of encrypting and securing all communications between your local computer and the Virtual Desktop.
-* You can connect from your web browser, in addition to the Microsoft Remote Desktop application.
-* It is not possible to copy/paste between your local computer and the Virtual Desktop. However, you can still copy/paste from within the AVD environment.
-
-## Connecting To SDE Desktop 
-### Using Web Browser
+## STEP 1: From Local Machine to SDE Desktop 
+### Web Browser
 Navigate to [https://rdweb.wvd.microsoft.com/arm/webclient](https://rdweb.wvd.microsoft.com/arm/webclient) on your computer's web browser.
 Select "AVD Host" to launch the Virtual Desktop:
 
@@ -22,7 +18,7 @@ After logging in, you will arrive at the Desktop where you can launch applicatio
 
 ![Screenshot showing AVD Desktop](images/avd_desktop.png){ width="1000" }
 
-### Using Microsoft Remote Desktop Client
+## Microsoft Remote Desktop Client
 You can also connect from the Microsoft Remote Desktop App, available for download on the Windows or MacOS app store.
 After launching the app, click on the "+" symbol and select "Add Workspace":
 
@@ -33,23 +29,23 @@ In the dialog box, put the URL
 
 ![Screenshot showing Microsoft Remote Desktop App](images/avd_desktop_add.png){ width="700" }
 
-You should then be able to launch the AVD from within the App.
+Users do not need to be connected to UChicago VPN when lending on SDE Desktop. 
 
-## Connecting To MidwayR3
-Once you are connected to the SDE environment using the AVD client following the steps given above, please follow one of the methods below to connect to MidwayR3 from the SDE environment.
+## STEP2: From SDE Desktop to SDE3
+Once you are connected to the SDE environment using the AVD client following the steps given above, please follow one of the methods below to connect to SDE3 from the SDE environment.
 
-### Using SSH client
-You can use Powershell or PuTTy terminal to connect to MidwayR3. Run the following command: ssh <cnetid>@sde.rcc.uchicago.edu: <br><br>
+### SSH Client
+You can use Powershell or PuTTy terminal to connect to SDE3. Run the following command: ssh <cnetid>@sde.rcc.uchicago.edu: <br><br>
 ![screenshot showing VMware Horizon data transfer](images/putty.jpg)
 ![screenshot showing VMware Horizon data transfer](images/putty_confirm.jpg)
 <br><br>
 
-### Using ThinLinc
+### ThinLinc
 
 ThinLinc is a remote desktop server application. It is recommended to
 use ThinLinc when you run software that requires a graphical user
 interface, or "GUI" (e.g., Stata, MATLAB). To use ThinLinc to connect
-to MidwayR3, please take the following steps on the SDE desktop:
+to SDE3, please take the following steps on the SDE desktop:
 
 1. Open a browser (Chrome or Firefox) and enter
    `https://sde.rcc.uchicago.edu` in the address bar.

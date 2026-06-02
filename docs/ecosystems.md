@@ -4,9 +4,12 @@ The University of Chicago Research Computing Center (RCC) hosts a diverse range 
 
 ## Midway Ecosystem
 
-### Midway3
+### [Midway3](https://rcc.uchicago.edu/midway3)
 
-In 2021, Midway3 and Midway3-AMD were introduced as flagship clusters for multi-purpose scientific computing. It is recommended that new users opt for Midway3 due to its latest hardware and software modules. Midway3 comes with shared and private compute nodes. 
+In 2021, Midway3 and Midway3-AMD were introduced as flagship clusters for multi-purpose scientific computing. It is recommended that new users opt for Midway3 due to its latest hardware and software modules. Midway3 comes with shared and private compute nodes.
+
+### [SHARED](https://shared.rcc.uchicago.edu/)
+SHARED is a storage platform for Secure Hub for Access, Reliability, and Exchange of Data. Designed as a cornerstone of UChicago's data lifecycle strategy, from collection and analysis to publication and archiving, SHARED will integrate with the University’s institutional repository, Knowledge@UChicago, and connect to national research networks like the Open Science Grid (OSG). The SHARED project and platform is led by the University of Chicago Library and Research Computing Center (RCC), with contributions from University IT Services, Data Science Institute, and Physical Sciences Division. It will provide critical [storage capacity](https://dl.acm.org/doi/10.1145/3708035.3736042) for research and supporting data science curricula development and education.
 
 ### [Beagle3](https://beag3.rcc.uchicago.edu/)
 
@@ -19,7 +22,7 @@ MidwaySSD, part of the Midway3 ecosystem, serves computationally intensive Socia
 
 Skyway allows users to seamlessly burst computing workloads through Midway 2 and 3 ecosystems to remote commercial cloud platforms like Amazon Web Services (AWS) and Google Cloud: Cloud Computing Services (GCP). It simplifies cloud computing tasks without requiring users to manage cloud resources. 
 
-### Midway2 
+### [Midway2](https://rcc.uchicago.edu/support-and-services/midway2) 
 
 Midway2, succeeding the original Midway in 2016, boasts advanced features. Midway2 comes with shared and private compute nodes. 
 
@@ -30,7 +33,9 @@ DaLI, the Data Lifecycle Instrument, as a part of the Midway2 ecosystem, facilit
 ### [GM4](https://gm4.rcc.uchicago.edu/)
 GM4, a GPU-enabled cluster, is part of the Midway2 ecosystem and facilitates multiscale materials modeling and machine learning, supporting diverse molecular dynamics and continuum simulations. Funded by the NSF under the MRI program, GM4 promotes collaborative efforts in algorithm and software development. Eligibility applies.
 
-## [SDE Ecosystem](https://sde-midwayr.rcc.uchicago.edu/) 
-### MidwayR3 & MidwayR2
+## SDE Ecosystem
+### [SDE3](https://sde-midwayr.rcc.uchicago.edu/)
+SDE3 is a trusted HPC environment for research on regulated data.
 
-MidwayR3 and MidwayR2, within the Secure Data Enclave, provide trusted HPC environments for research on regulated data. 
+### SDE2
+SDE2 is a trusted HPC environment for research on regulated data.

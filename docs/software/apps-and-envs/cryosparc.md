@@ -1,6 +1,6 @@
 # CryoSPARC
 
-CryoSPARC (Cryo-EM Single Particle Ab-Initio Reconstruction and Classification) is a state-of-the-art software platform for processing cryo-electron microscopy (cryo-EM) data. It functions as a dispatcher for cryo-EM workloads across a cluster of servers and workstations. RCC provides full support for CryoSPARC on the [Beagle3](../../beagle3-overview.md) cluster.
+CryoSPARC (Cryo-EM Single Particle Ab-Initio Reconstruction and Classification) is a state-of-the-art software platform for processing cryo-electron microscopy (cryo-EM) data. It functions as a dispatcher for cryo-EM workloads across a cluster of servers and workstations. RCC provides full support for CryoSPARC on the [Beagle3](../../ecosystems.md) cluster.
 
 ## Installation and Setup
 

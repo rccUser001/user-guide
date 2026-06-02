@@ -115,20 +115,15 @@ nav:
       - Basics: tutorials/gis/index.md
       - Geocoding: tutorials/gis/geocoding.md
       - Geospatial: tutorials/gis/MidwayGeoSpatial.md
+    - SDE3:
+      - Overview: tutorials/sde3/overview.md
+      - Connection: tutorials/sde3/connection.md
+      - Data Transfer: tutorials/sde3/data-transfer.md
+      - Computing: tutorials/sde3/compute.md
   
   - Glossary: glossary.md 
   - Best Practices: mistakes.md
   
-  - "MidwayR3":
-    - Overview: midwayR3/overview.md
-    - Accessing: midwayR3/accessing.md
-    - Connecting: midwayR3/connecting.md
-    - Data transfer: midwayR3/data-transfer.md
-    - Running jobs: midwayR3/running-jobs.md
-    - Partitions: midwayR3/partitions.md
-
-  - SHARED: shared.md
-
 extra:
   analytics:
     provider: google
