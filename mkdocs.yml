@@ -1,6 +1,7 @@
 site_name: RCC User Guide
 repo_url: https://rcc.uchicago.edu/
 repo_name: Main RCC website
+docs_dir: docs
 theme:
   name: 'material'
   # name: 'readthedocs'
@@ -27,31 +28,59 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+
 nav:
   - Home: 'index.md' 
-  - 'RCC 101':  
-    - Get Started: 101/index.md
-    - Accounts: 101/accounts.md 
-    - Ecosystems: 101/ecosystems.md 
-    - Allocations: 101/allocations.md 
-    - Connecting: 101/connecting.md
-    - Software: 101/software.md
-    - Data Storage: 101/data.md
-    - Computing: 101/jobs.md 
-    - Policies: 101/policies.md 
-    - Glossary: 101/glossary.md 
-    - Mistakes: 101/mistakes.md
+  - Ecosystems: ecosystems.md 
+  - Accounts: accounts.md 
+  - Allocations: allocations.md 
+
+  - Connection: 
+    - Overview: connection/main.md
+    - 'SSH': connection/ssh/main.md 
+    - 'Open OnDemand': connection/open_ondemand/open_ondemand.md
+    - 'ThinLinc': 
+      - Basics: connection/thinlinc/main.md
+      - Troubleshooting: connection/thinlinc/troubleshooting.md
+    - Globus: connection/globus/access-files.md
+  
+  - 'Data Transfer':
+    # #TODO- SFTP Clients: data_transfer/sftp/clients.md
+    - Globus: data_transfer/globus/transfer-files.md
+    - SAMBA: data_transfer/persistent_mapping/samba.md
+    - CLI: data_transfer/cli/cli.md
+    # - Cloud:
+      # - Globus: data_transfer/cloud/cloud-sync.md
+      # - RClone: data_transfer/cloud/rclone.md
+
+  - Data Sharing: 
+    - Filesystems: data_sharing/access_control.md
+    - Globus: data_sharing/globus_sharing.md
+    - Web Hosting: data_sharing/http_sharing.md
+    - Datasets: 
+      - AlphaFold: data_sharing/databases/alphafold.md
+      - BFI: data_sharing/databases/bfi.md
+      - Booth: data_sharing/databases/booth.md
 
   - 'Storage': 
     - Basics: storage/main.md
     - FAQ: storage/faq.md
 
-  - Partitions: partitions.md
+  - 'Computing': 
+    - Scheduler: slurm/main.md
+    - Partitions: slurm/partitions.md
+    - Interactive Jobs: slurm/sinteractive.md
+    - Batch Jobs: slurm/sbatch.md 
+    - FAQ: slurm/faq.md
 
   - 'Software':
     - Overview: software/index.md
+    - Compilers: software/compilers.md
+    - Libraries: software/libraries.md
+    - Developer Tools: software/dev-tools.md
     - Commonly Used:
       - Alphafold: software/apps-and-envs/alphafold.md
+      - Apptainer & Singularity : software/apps-and-envs/singularity.md
       - CryoSPARC: software/apps-and-envs/cryosparc.md
       - CUDA-Q: software/apps-and-envs/cudaq.md
       - Gaussian: software/apps-and-envs/gaussian.md
@@ -65,10 +94,10 @@ nav:
       - OpenPose: software/apps-and-envs/openpose.md
       - ORCA: software/apps-and-envs/orca.md
       - Perl: software/apps-and-envs/perl.md
-      - Python, Anaconda, Jupyter Notebook & JupyterLab: software/apps-and-envs/python.md
+      - Python & Notebooks: software/apps-and-envs/python.md
       - R and RStudio: software/apps-and-envs/r.md
       - Charliecloud: software/apps-and-envs/charliecloud.md
-      - Singularity: software/apps-and-envs/singularity.md
+      - Space Ranger: software/apps-and-envs/spaceranger.md
       - Spark: software/apps-and-envs/spark.md
       - Stata: software/apps-and-envs/stata.md
       - Tensorflow and PyTorch: software/apps-and-envs/tf-and-torch.md
@@ -80,64 +109,23 @@ nav:
         - API: software/apps-and-envs/scode/api.md
     - FAQ: software/faq.md
 
-  - 'Compiling':
-    - Compilers: software/compilers.md
-    - Libraries: software/libraries.md
-    - CMake: software/cmake.md
-    - Developer Tools: software/dev-tools.md
-
-  - 'Databases': 
-    - AlphaFold: databases/alphafold.md
-    - BFI: databases/bfi.md
-    - Booth: databases/booth.md
-
-  - 'Open OnDemand': open_ondemand/open_ondemand.md
-  
   - "Tutorials":
     - KICP Tutorial: tutorials/kicp.md
     - MSCA Tutorial: tutorials/msca.md
-
-  - 'SSH': 
-    - Basics: ssh/main.md 
-    - Advanced: ssh/advance.md 
-    - FAQ: ssh/faq.md
-
-  - 'ThinLinc': 
-    - Basics: thinlinc/main.md
-    - Troubleshooting: thinlinc/troubleshooting.md
-
-  - SAMBA: samba.md
-
-  - 'Globus': 
-    - Access Files: globus/access-files.md
-    - Transfer Files: globus/transfer-files.md
-    - Share Files: globus/share-files.md
-
-  - 'GIS':
-    - Basics: gis/index.md
-    - Geocoding: gis/geocoding.md
-    - Geospatial: gis/MidwayGeoSpatial.md
-
-  - HTTP: http.md
-
-  - 'SLURM': 
-    - Basics: slurm/main.md
-    - SBATCH: slurm/sbatch.md 
-    - SINTERACTIVE: slurm/sinteractive.md
-    - FAQ: slurm/faq.md
-
-  - "MidwayR3":
-    - Overview: midwayR3/overview.md
-    - Accessing: midwayR3/accessing.md
-    - Connecting: midwayR3/connecting.md
-    - Data transfer: midwayR3/data-transfer.md
-    - Running jobs: midwayR3/running-jobs.md
-    - Partitions: midwayR3/partitions.md
-
-  - Beagle3: beagle3-overview.md
-
-  - SHARED: shared.md
-
+    - GIS:
+      - Basics: tutorials/gis/index.md
+      - Geocoding: tutorials/gis/geocoding.md
+      - Geospatial: tutorials/gis/MidwayGeoSpatial.md
+    - SDE3:
+      - Overview: tutorials/sde3/overview.md
+      - Connection: tutorials/sde3/connection.md
+      - Data Transfer: tutorials/sde3/data-transfer.md
+      - Computing: tutorials/sde3/compute.md
+      - Software: tutorials/sde3/software.md
+  
+  - Glossary: glossary.md 
+  - Best Practices: mistakes.md
+  
 extra:
   analytics:
     provider: google
