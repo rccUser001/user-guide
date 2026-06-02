@@ -27,11 +27,12 @@ Command above will change the $PATH temperorly only for that bash shell. You can
 echo 'export PATH=/project/pi-cnetid/software/spaceranger-3.0.0:$PATH' >> ~/.bashrc
 ```
 
-These commands will ensure that `spaceranger-3.0.0` is extracted to the specified location and added to the PATH for permanent access. Follow instructions here to proceed: <https://www.10xgenomics.com/support/software/space-ranger/downloads/space-ranger-installation>
+These commands will ensure that `spaceranger-3.0.0` is extracted to the specified location and added to the PATH for permanent access as discussed [here](https://www.10xgenomics.com/support/software/space-ranger/downloads/space-ranger-installation)
 
-Running as a container: Docker images are available at Docker hub: https://hub.docker.com/r/cumulusprod/spaceranger/tags
-Follow the instructions at the singularity page on running containers.
+Docker [image](https://hub.docker.com/r/cumulusprod/spaceranger/tags) can be executed using Apptainer.
 
-[Tutorials] (https://www.10xgenomics.com/support/software/space-ranger/latest/tutorials)
-[Job Submission Mode](https://www.10xgenomics.com/support/software/space-ranger/latest/advanced/job-submission-mode)
-[Space Ranger Cluster Mode](https://www.10xgenomics.com/support/software/space-ranger/latest/advanced/cluster-mode)
+- [Tutorials](https://www.10xgenomics.com/support/software/space-ranger/latest/tutorials)
+
+- [Job Submission Mode](https://www.10xgenomics.com/support/software/space-ranger/latest/advanced/job-submission-mode)
+
+- [Space Ranger Cluster Mode](https://www.10xgenomics.com/support/software/space-ranger/latest/advanced/cluster-mode)

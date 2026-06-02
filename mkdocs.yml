@@ -80,6 +80,7 @@ nav:
     - Developer Tools: software/dev-tools.md
     - Commonly Used:
       - Alphafold: software/apps-and-envs/alphafold.md
+      - Apptainer & Singularity : software/apps-and-envs/singularity.md
       - CryoSPARC: software/apps-and-envs/cryosparc.md
       - CUDA-Q: software/apps-and-envs/cudaq.md
       - Gaussian: software/apps-and-envs/gaussian.md
@@ -96,7 +97,7 @@ nav:
       - Python & Notebooks: software/apps-and-envs/python.md
       - R and RStudio: software/apps-and-envs/r.md
       - Charliecloud: software/apps-and-envs/charliecloud.md
-      - Singularity: software/apps-and-envs/singularity.md
+      - Space Ranger: software/apps-and-envs/spaceranger.md
       - Spark: software/apps-and-envs/spark.md
       - Stata: software/apps-and-envs/stata.md
       - Tensorflow and PyTorch: software/apps-and-envs/tf-and-torch.md
@@ -120,6 +121,7 @@ nav:
       - Connection: tutorials/sde3/connection.md
       - Data Transfer: tutorials/sde3/data-transfer.md
       - Computing: tutorials/sde3/compute.md
+      - Software: tutorials/sde3/software.md
   
   - Glossary: glossary.md 
   - Best Practices: mistakes.md

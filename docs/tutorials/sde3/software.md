@@ -1,6 +1,8 @@
-# Offline CRAN Snapshot
+# Software
 
-SDE3 does not have Internet access. An offline snapshot of CRAN is created with name sdeCRAN that can be used to install R packages by any general user. It could be accessed by setting up 
+## R: CRAN Repository
+
+An offline snapshot of CRAN is available at 
 ***repos = "file:///software/sdeCRAN"***
 <br><br/>
 As an example, to install dplyr
