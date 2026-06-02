@@ -110,8 +110,8 @@ nav:
     - FAQ: software/faq.md
 
   - "Tutorials":
-    - KICP Tutorial: tutorials/kicp.md
-    - MSCA Tutorial: tutorials/msca.md
+    - KICP: tutorials/kicp.md
+    - MSCA: tutorials/msca.md
     - GIS:
       - Basics: tutorials/gis/index.md
       - Geocoding: tutorials/gis/geocoding.md
@@ -122,6 +122,12 @@ nav:
       - Data Transfer: tutorials/sde3/data-transfer.md
       - Computing: tutorials/sde3/compute.md
       - Software: tutorials/sde3/software.md
+    - SDE2:
+      - Overview: tutorials/sde2/overview.md
+      - Connection: tutorials/sde2/connection.md
+      - Data Transfer: tutorials/sde2/data-transfer.md
+      - Computing: tutorials/sde2/compute.md
+      - Software: tutorials/sde2/software.md
   
   - Glossary: glossary.md 
   - Best Practices: mistakes.md
