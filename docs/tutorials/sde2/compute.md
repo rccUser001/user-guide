@@ -1,8 +1,8 @@
-# Running jobs on SDE3
+# Running jobs on SDE2
 
- SDE3 use the SLURM scheduler to allocate jobs to compute nodes. However, SDE3 has no SUs allocation requirement. 
+ SDE2 use the SLURM scheduler to allocate jobs to compute nodes. However, SDE2 has no SUs allocation requirement. 
 <br><br/>
-Upon connecting to SDE3, users lend on a login node, which can be used for compiling and debugging code, visualizing data, editing and managing files. All intensive computations should be submitted to compute nodes. Running jobs on SDE3 is no different from [running jobs on Midway](../../slurm/main.md).
+Upon connecting to SDE2, users lend on a login node, which can be used for compiling and debugging code, visualizing data, editing and managing files. All intensive computations should be submitted to compute nodes. Running jobs on SDE2 is no different from [running jobs on Midway](../../slurm/main.md).
 
 # Slurm Partitions
 
@@ -22,10 +22,10 @@ The typical output will include:
 If a user wants to submit their job to the particular compute node, this can be requested by adding the Slurm flag `--nodelist=<compute_node_ID>`. Compute nodes that differ in available features can be allocated by setting an additional constraint `--constraint=<compute_node_feature>`, for example `--constraint=v100` will allocate job to the compute node with NVIDIA V100 GPUs.
 
 
-## SDE3 Shared Partitions
-All SDE3 users can submit jobs to any of the following shared partitions:
+## SDE2 Shared Partitions
+All SDE2 users can submit jobs to any of the following shared partitions:
 
-=== "SDE3"
+=== "SDE2"
       | Partition | Nodes  | CPUs | CPU Type  | Total Memory| Local Scratch 
       | --------- | -------| -----| --------- | ------------| ------------ |
       | skylake   |   4    |  40  | gold-6148 |  96 GB      |     900 MB   | 
@@ -33,19 +33,19 @@ All SDE3 users can submit jobs to any of the following shared partitions:
 
 
 
-## SDE3 Institutional Partitions
-If you are a SDE3 researcher affiliated with the Booth School of Business, you are entitled to Booth purchased hardware resources. Each node has 1.8 GB of local scratch.
+## SDE2 Institutional Partitions
+If you are a SDE2 researcher affiliated with the Booth School of Business, you are entitled to Booth purchased hardware resources. Each node has 1.8 GB of local scratch.
 
-=== "SDE3"
+=== "SDE2"
       | Partition | Nodes  | Cores/nodes | CPU Type  | GPUs | GPU Type| Total Memory| Local Scratch | Nodelist     |
       | --------- | -------| ------------| --------- | ---- | ------- | ----------- | ------------- | ------------ |
       | booth     |   1    |  40         | gold-6248 | None |  None   |    1536 GB  |  1.8 GB       | sde006       | 
       | booth     |   2    |  48         | gold-6248r| None |  None   |    384 GB   |  1.8 GB       | sde[007-008] |
       | booth     |   1    |  48         | gold-6248r| 2    |  v100   |    384 GB   |  1.8 GB       | sde009       |
 
-## SDE3 QOC
+## SDE2 QOC
 
-===+ "SDE3 QOS"
+===+ "SDE2 QOS"
 
     | QOS     | Partitions | Max Wall Time | Max Sub Job / User |
     |---------|----------- |---------------|--------------------|
@@ -62,7 +62,7 @@ sacctmgr list qos format=Name,MaxWall,MaxSubmitPU
     QOS for private and institutional partitions can be changed upon owner's request.
 
 ## Private Partitions
-Private SDE3 partitions are typically associated with a research group with access approved by PI. Private partitions can be purchased via [RCC Cluster Partnership Program](https://rcc.uchicago.edu/support-and-services/cluster-partnership-program){:target="_blank"} to better accommodate the needs of a research group. PI may request to change QOS of private partitions at any time.
+Private SDE2 partitions are typically associated with a research group with access approved by PI. Private partitions can be purchased via [RCC Cluster Partnership Program](https://rcc.uchicago.edu/support-and-services/cluster-partnership-program){:target="_blank"} to better accommodate the needs of a research group. PI may request to change QOS of private partitions at any time.
 
 
 

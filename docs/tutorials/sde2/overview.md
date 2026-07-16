@@ -1,6 +1,6 @@
-# Welcome to SDE3 User Guide
+# Welcome to SDE2 User Guide
 
-SDE3 is the RCC's secure HPC cluster that provides a trusted research environment to support work with regulated research data that requires high-level protection. 
+SDE2 is the RCC's secure HPC cluster that provides a trusted research environment to support work with regulated research data that requires high-level protection. 
 
 Examples of regulated research data include:
 
@@ -12,25 +12,25 @@ Examples of regulated research data include:
 * Data with security requirements set by the Institutional Review Board (IRB)
 * Commercial data with security requirements set by the Data Use Agreement (DUA)
 
-The [research data classification](https://srds.uchicago.edu/secure-research-data-usage-guide/) is provided by University Research Administration. If you have any questions about SDE3, please email midwayr-help@rcc.uchicago.edu.
+The [research data classification](https://srds.uchicago.edu/secure-research-data-usage-guide/) is provided by University Research Administration. If you have any questions about SDE2, please email midwayr-help@rcc.uchicago.edu.
 
 ## Eligibililty
 
-To use SDE3 resources, you will need to have a SDE3 user account. Although both Midway and SDE3 use CNetID for authentication, they do not share accounts. If you do not have a SDE3 user account, please see the <a href="https://sde-midwayr.rcc.uchicago.edu/getting-started/" target="_blank">Getting Started</a> section for how to apply for an account.
+To use SDE2 resources, you will need to have a SDE2 user account. Although both Midway and SDE2 use CNetID for authentication, they do not share accounts. If you do not have a SDE2 user account, please see the <a href="https://sde-midwayr.rcc.uchicago.edu/getting-started/" target="_blank">Getting Started</a> section for how to apply for an account.
 
 !!! note
-    General users can apply only after the PI has been approved for SDE3 account. Only authorized users listed in Data Use Agreement (DUA) and/or Internal Review Board (IRB) protocol can get access to a project hosted on SDE3 upon PI approval. If the list of authorized users is not set explicitly in the data use agreement, then any UChicago researcher approved by the PI can work with the project data hosted on SDE3.
+    General users can apply only after the PI has been approved for SDE2 account. Only authorized users listed in Data Use Agreement (DUA) and/or Internal Review Board (IRB) protocol can get access to a project hosted on SDE2 upon PI approval. If the list of authorized users is not set explicitly in the data use agreement, then any UChicago researcher approved by the PI can work with the project data hosted on SDE2.
  
 
 Please also note that you must have enabled 
 <a href="https://cnet.uchicago.edu/2FA/" target="_blank">Two Factor Authentication</a>
-for your CNetID before connecting to SDE3.
+for your CNetID before connecting to SDE2.
 
 ## System Overview
 
-SDE3 is comprised of two login nodes and four compute nodes. The total installed storage on SDE3 is 441TB. It uses SLURM as its workload manager and the software environment module system to manage installed software.
+SDE2 is comprised of two login nodes and four compute nodes. The total installed storage on SDE2 is 441TB. It uses SLURM as its workload manager and the software environment module system to manage installed software.
 <br><br/>
-**Login Nodes:** SDE3 hosts login nodes with the following specifications: 
+**Login Nodes:** SDE2 hosts login nodes with the following specifications: 
 
 * CPUs: 2x Intel Xeon Gold 6130 2.1GHz
 * Total cores per node: 16 cores
@@ -48,13 +48,13 @@ There are no limits on SU usage at the moment. PIs don't need to apply for SUs a
 
 **File Systems:**
 
-* SDE3 utilizes a GPFS filesystem, with `/home` and `/project` directories mounted for private and collaborative work. 
-The `/home/<CNetID>` directory has a strict quota of 30GB and the quota for `/project/pi-<PI_CNETID>-<ProjectName>` varies depending on the project with the default startup storage allocation of 500 GB. SDE3 does not have a scratch filesystem.
+* SDE2 utilizes a GPFS filesystem, with `/home` and `/project` directories mounted for private and collaborative work. 
+The `/home/<CNetID>` directory has a strict quota of 30GB and the quota for `/project/pi-<PI_CNETID>-<ProjectName>` varies depending on the project with the default startup storage allocation of 500 GB. SDE2 does not have a scratch filesystem.
 
 
-**Using SDE3:**
+**Using SDE2:**
 
-* SDE3 nodes run CentOS 7. Its job scheduler is the [SLURM](https://slurm.schedmd.com/). Slurm commands enable you to submit, manage, monitor, and control your jobs.
+* SDE2 nodes run CentOS 7. Its job scheduler is the [SLURM](https://slurm.schedmd.com/). Slurm commands enable you to submit, manage, monitor, and control your jobs.
 
 **Software:**
 

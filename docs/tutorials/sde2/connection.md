@@ -1,7 +1,7 @@
 # Connection
-The SDE3 system is accessed over the end-to-end encrypted network. Users first establish a connection to the SDE Desktop and then authenticate to SDE3 from within the SDE Desktop. The SDE Desktop serves as a secure Windows-based gateway to the Linux-based SDE3 HPC environment. Data cannot be transferred directly from SDE3 to end-user devices.<br><br>
+The SDE2 system is accessed over the end-to-end encrypted network. Users first establish a connection to the SDE Desktop and then authenticate to SDE2 from within the SDE Desktop. The SDE Desktop serves as a secure Windows-based gateway to the Linux-based SDE2 HPC environment. Data cannot be transferred directly from SDE2 to end-user devices.<br><br>
 
-![Screenshot showing SDE3 general connection](images/connection.png){ width="1000" }
+![Screenshot showing SDE2 general connection](images/connection.png){ width="1000" }
 
 ## STEP 1: From Local Machine to SDE Desktop 
 ### Web Browser
@@ -31,11 +31,11 @@ In the dialog box, put the URL
 
 Users do not need to be connected to UChicago VPN when lending on SDE Desktop. 
 
-## STEP2: From SDE Desktop to SDE3
-Once you are connected to the SDE environment using the AVD client following the steps given above, please follow one of the methods below to connect to SDE3 from the SDE environment.
+## STEP2: From SDE Desktop to SDE2
+Once you are connected to the SDE environment using the AVD client following the steps given above, please follow one of the methods below to connect to SDE2 from the SDE environment.
 
 ### SSH Client
-You can use Powershell or PuTTy terminal to connect to SDE3. Run the following command: ssh <cnetid>@sde.rcc.uchicago.edu: <br><br>
+You can use Powershell or PuTTy terminal to connect to SDE2. Run the following command: ssh <cnetid>@sde.rcc.uchicago.edu: <br><br>
 ![screenshot showing VMware Horizon data transfer](images/putty.jpg)
 ![screenshot showing VMware Horizon data transfer](images/putty_confirm.jpg)
 <br><br>
@@ -45,7 +45,7 @@ You can use Powershell or PuTTy terminal to connect to SDE3. Run the following c
 ThinLinc is a remote desktop server application. It is recommended to
 use ThinLinc when you run software that requires a graphical user
 interface, or "GUI" (e.g., Stata, MATLAB). To use ThinLinc to connect
-to SDE3, please take the following steps on the SDE desktop:
+to SDE2, please take the following steps on the SDE desktop:
 
 1. Open a browser (Chrome or Firefox) and enter
    `https://sde.rcc.uchicago.edu` in the address bar.
