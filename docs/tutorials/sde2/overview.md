@@ -1,12 +1,12 @@
 # Welcome to the SDE2 User Guide
 
-SDE2 is an HPC cluster designed to support research involving restricted data classified at the [moderate-impact](https://srds.uchicago.edu/secure-research-data-usage-guide/) level. Like other HPC systems managed by RCC, SDE2 allows users to process large amounts of data using distributed computing managed by the Slurm job scheduler. Data subject to a Data Use Agreement, Institutional Review Board (IRB) protocol, or a procurement contract is considered sensitive. For common examples of sensitive data categories, refer to the [Secure Research Data Strategy](https://srds.uchicago.edu/secure-research-data-usage-guide).
+SDE2 is an HPC cluster designed to support research involving restricted data classified at the [moderate-impact](https://srds.uchicago.edu/secure-research-data-usage-guide/) level. Like other HPC systems managed by RCC, SDE2 allows users to process large amounts of data using distributed computing managed by the Slurm job scheduler. Research data subject to a Data Use Agreement, Institutional Review Board (IRB) protocol, or a procurement contract is considered restricted data. For common examples of sensitive data categories, refer to the [Secure Research Data Strategy](https://srds.uchicago.edu/secure-research-data-usage-guide).
 
 If you have any questions about SDE2, please email midwayr-help@rcc.uchicago.edu.
 
 ## Eligibility
 
-All UChicago researchers with PI status are eligible to establish workspaces on SDE2. However, the project must be subject to an active Data Use Agreement and/or an approved Institutional Review Board protocol, or an executed procurement contract. Additionally, the data must not exceed the moderate-impact level. High-impact data should not be stored on SDE2 — RCC offers a dedicated SDE3 system for high-impact data. Public or non-sensitive data can be stored on any of the general-purpose HPC systems managed by RCC within the Midway ecosystem.
+All UChicago researchers with PI status are eligible to establish workspaces on SDE2. However, the project must be subject to an active Data Use Agreement (DUA) and/or an approved Institutional Review Board (IRB) protocol, and/or an executed Procurement Contract (PC). Additionally, the data must not exceed the moderate-impact level. High-impact data should not be stored on SDE2 — RCC offers a dedicated SDE3 system for high-impact data. Public or non-sensitive data can be stored on any of the general-purpose HPC systems managed by RCC within the Midway ecosystem.
 
 
 ## Access and Allocation

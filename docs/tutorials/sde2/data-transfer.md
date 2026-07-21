@@ -61,14 +61,14 @@ After the regulated data has been transferred from the Data Provider to the SDE 
 ![screenshot showing VMware Horizon data transfer](images/winscp.jpg)
 <br><br>
 
-Connect to `sde.rcc.uchicago.edu` with your CNet ID and password:<br><br>
-![screenshot showing VMware Horizon data transfer](images/winscp_upload1.jpg)
+Connect to `midwayr2.rcc.uchicago.edu` with your CNet ID and password:<br><br>
+![screenshot showing VMware Horizon data transfer](images/winscp_upload1_sde2.png)
 <br><br>
 
 Add the host key if this is your first time using WinSCP to move files:<br><br>
-![screenshot showing VMware Horizon data transfer](images/winscp_hostkey.jpg)
+![screenshot showing VMware Horizon data transfer](images/winscp_hostkey_sde2.png)
 <br><br>
 
 Move the folders or files you want to transfer to SDE2 using the Upload function -- please do remember there is a 30GB quota on the home directories and a 500GB quota (default) on project, so we strongly recommend keeping your data in project:<br><br>
-![screenshot showing VMware Horizon data transfer](images/winscp_upload2.jpg)
+![screenshot showing VMware Horizon data transfer](images/winscp_upload2_sde2.png)
 <br><br>
