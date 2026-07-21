@@ -1,3 +1,5 @@
+# Data Transfer
+
 Transferring data from a Data Provider Server to the SDE2 HPC system involves a two-step process, using the Secure Data Enclave (SDE) Virtual Desktop as an intermediate staging area. The SDE desktop itself does not have computational capabilities and is intended only for temporary data storage until the data is fully migrated to SDE2. Since SDE2 does not have internet access available to general users, this intermediate step is necessary.
 
 For moderately sized datasets (up to 1TB), users can follow the steps outlined below. If you need to transfer larger datasets, please contact us at midwayr-help@rcc.uchicago.edu to discuss alternative arrangements.
@@ -39,9 +41,9 @@ You will be prompted to enter the password when establishing the connection. Avo
     
 
 ### Method 3. Download Data from UChicago Box 		
-If regulated data was shared with you via UChicago Box or was originally collected through UChicago Box, you can access it using browser. Please consult with [UChicago Sensitive Data Usage Guide](https://dsc.uchicago.edu/university-of-chicago-sensitive-data-usage-guide/) for data types allowed in UChciago Box.
+If regulated data was shared with you via UChicago Box or was originally collected through UChicago Box, you can access it using browser. Please consult the [UChicago Sensitive Data Usage Guide](https://dsc.uchicago.edu/university-of-chicago-sensitive-data-usage-guide/) for data types allowed in UChicago Box.
 
-Once you logged in to the SDE2 desktop , you can open a browser and log in to a Box account at [https://uchicago.account.box.com](https://uchicago.account.box.com/login):<br><br>
+Once logged in to the SDE2 desktop, you can open a browser and log in to a Box account at [https://uchicago.account.box.com](https://uchicago.account.box.com/login):<br><br>
 ![screenshot showing VMware Horizon data transfer](images/box_login.jpg)
 <br><br>
 
@@ -67,6 +69,6 @@ Add the host key if this is your first time using WinSCP to move files:<br><br>
 ![screenshot showing VMware Horizon data transfer](images/winscp_hostkey.jpg)
 <br><br>
 
-Move the folders or files you wish to SDE2 using the Upload function -- please do remember there is a 30GB quota on the home directories and a 500GB quota (default) on project, so we strongly recommend keeping your data in project:<br><br>
+Move the folders or files you want to transfer to SDE2 using the Upload function -- please do remember there is a 30GB quota on the home directories and a 500GB quota (default) on project, so we strongly recommend keeping your data in project:<br><br>
 ![screenshot showing VMware Horizon data transfer](images/winscp_upload2.jpg)
 <br><br>
