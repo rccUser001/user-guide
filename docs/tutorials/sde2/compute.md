@@ -1,10 +1,10 @@
 # Running jobs on SDE2
 
- SDE2 use the SLURM scheduler to allocate jobs to compute nodes. However, SDE2 has no SUs allocation requirement. 
-<br><br/>
-Upon connecting to SDE2, users lend on a login node, which can be used for compiling and debugging code, visualizing data, editing and managing files. All intensive computations should be submitted to compute nodes. Running jobs on SDE2 is no different from [running jobs on Midway](../../slurm/main.md).
+SDE2 uses the Slurm scheduler to allocate jobs to compute nodes. Unlike other RCC systems, SDE2 does not require a Service Units (SUs) allocation.
+<br><br>
+Upon connecting to SDE2, users land on a login node, which can be used for compiling and debugging code, visualizing data, and editing and managing files. All intensive computations should be submitted to compute nodes. Running jobs on SDE2 is no different from [running jobs on Midway](../../slurm/main.md).
 
-# Slurm Partitions
+## Slurm Partitions
 
 Partitions are collections of compute nodes with similar characteristics. Normally, a user submits a job to a partition (via Slurm flag `--partition=<partition>`) and then the job is allocated to any idle compute node within that partition. To get a full list of available partitions, type the following command in the terminal
 ```
