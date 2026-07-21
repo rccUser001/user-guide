@@ -1,64 +1,37 @@
-# Welcome to SDE2 User Guide
+# Welcome to the SDE2 User Guide
 
-SDE2 is the RCC's secure HPC cluster that provides a trusted research environment to support work with regulated research data that requires high-level protection. 
+SDE2 is the HPC cluster that is designed to support work with restricted research data of [moderate-impact](https://srds.uchicago.edu/secure-research-data-usage-guide/). As for the other HPC systems managed by RCC, it allows to process large amount of data taking advantage of distributed computing operated via the Slurm scheduler. If your data is subject to a Data Use Agreement, Institutional Review Board protocol, or a Procurement Contract it is considered sensitive with common examples from [Secure Research Data Strategy](https://srds.uchicago.edu/secure-research-data-usage-guide)
 
-Examples of regulated research data include:
-
-* Personally Identifiable Information (PII)
-* Limited data sets as per Health Insurance Portability and Accountability Act (HIPAA) definition
-* Some Types of Health Information 
-* Data covered under the Federal Information Security Management Act (FISMA)
-* Data covered under the Federal Education Rights and Privacy Act (FERPA)
-* Data with security requirements set by the Institutional Review Board (IRB)
-* Commercial data with security requirements set by the Data Use Agreement (DUA)
-
-The [research data classification](https://srds.uchicago.edu/secure-research-data-usage-guide/) is provided by University Research Administration. If you have any questions about SDE2, please email midwayr-help@rcc.uchicago.edu.
+If you have any questions about SDE2, please email midwayr-help@rcc.uchicago.edu.
 
 ## Eligibililty
 
-To use SDE2 resources, you will need to have a SDE2 user account. Although both Midway and SDE2 use CNetID for authentication, they do not share accounts. If you do not have a SDE2 user account, please see the <a href="https://sde-midwayr.rcc.uchicago.edu/getting-started/" target="_blank">Getting Started</a> section for how to apply for an account.
+All UChicago researchers with PI status are eligible to establish workspaces on SDE2. However, the project must be subject to an active Data Use Agreeemnt, and/or approved Institutional Review Board protocol, or executed procurement contract.  Additionally, the project must involve sensitive data that does not exceed moderate-impact level. The high-impact data should not be stored on SDE2 - RCC offers a dedicated SDE3 system for high impact data. The public or non-sensitive data can be stored on any of the general purpose HPC systems managed by RCC within the Midway ecosystem.
+
+
+## Access and Allocation
+Allocation on SDE is provided for the duration of project and revoked upon project completion or expiration of the associated data governing agreements. A workspace is requested by PI for each project. Unlike Midway ecosystem where a single authorization is granted per user to access all PI's projects, on SDE2 users need to be authorized per each project. A user account created to access Midway ecosystem (Midway2, Midway3, Midway3, etc) does not apply to SDE2. A separate user account needs to be created to access SDE2 projects. Please also note that you must have enabled [Two Factor Authentication](https://cnet.uchicago.edu/2FA) for your CNetID before connecting to SDE2.
 
 !!! note
-    General users can apply only after the PI has been approved for SDE2 account. Only authorized users listed in Data Use Agreement (DUA) and/or Internal Review Board (IRB) protocol can get access to a project hosted on SDE2 upon PI approval. If the list of authorized users is not set explicitly in the data use agreement, then any UChicago researcher approved by the PI can work with the project data hosted on SDE2.
+    Researchers can apply for general user accounts only after a PI established a project workspace on SDE2. Please reach out to your PI to find the project acronym when requesting a user account. 
  
-
-Please also note that you must have enabled 
-<a href="https://cnet.uchicago.edu/2FA/" target="_blank">Two Factor Authentication</a>
-for your CNetID before connecting to SDE2.
-
 ## System Overview
 
-SDE2 is comprised of two login nodes and four compute nodes. The total installed storage on SDE2 is 441TB. It uses SLURM as its workload manager and the software environment module system to manage installed software.
+SDE2 is comprised of multiple login nodes and a collection of compute nodes. A shared filesystem supports up to 750TB of data. Every PI is eligible for a 500GB of storage free of charge. Any additonla storage can be purchased through the Cluster Partnership Program, please email us at cpp@rcc.uchicago.edu and indicate the system name and storage size you would like to request.
 <br><br/>
-**Login Nodes:** SDE2 hosts login nodes with the following specifications: 
 
-* CPUs: 2x Intel Xeon Gold 6130 2.1GHz
-* Total cores per node: 16 cores
-* Threads per core: 2
-* Memory: 96GB of RAM
+**File System:**
 
-**Compute Nodes:** 
-There are no limits on SU usage at the moment. PIs don't need to apply for SUs allocation.
+* SDE2 utilizes a GPFS filesystem, with `/home` and `/project` directories mounted for private and collaborative work, respectively. 
+The `/home/<CNetID>` directory has a strict quota of 30GB and the quota for `/project/pi-<PI_CNETID>-<ProjectName>` varies depending on the project. SDE2 does not have a scratch filesystem.
 
-**Network:**
-
-* Intel Ethernet Controller 10Gbps Adapter
-* Mellanox EDR Infiniband up to 100Gbps bandwidth and a sub-microsecond latency
-* Neither compute nor login nodes have direct access to the Internet
-
-**File Systems:**
-
-* SDE2 utilizes a GPFS filesystem, with `/home` and `/project` directories mounted for private and collaborative work. 
-The `/home/<CNetID>` directory has a strict quota of 30GB and the quota for `/project/pi-<PI_CNETID>-<ProjectName>` varies depending on the project with the default startup storage allocation of 500 GB. SDE2 does not have a scratch filesystem.
-
-
-**Using SDE2:**
-
-* SDE2 nodes run CentOS 7. Its job scheduler is the [SLURM](https://slurm.schedmd.com/). Slurm commands enable you to submit, manage, monitor, and control your jobs.
 
 **Software:**
 
-* Organized in [modules](http://modules.sourceforge.net/)
+RCC maintains the centrally-supported scientific software on SDE2 system and can install required packages on request. Users can also install their own project-specific packages. However, due to security and privacy controls the software installation protocol may be convoluted - please feel free to contact us if you have any questions at midwayr-help@rcc.uchicago.edu.
+
+The free scientific software is shared with all users at no cost. However, the proprietory software may have limited availability due to the restricted number of checked licenses or license locked to a particular research group. Please feel free to reach out to us if you would like to install a proprietory software.
+
 * Use `module avail`, to see what is available
 * To load a particular available package, for example, `gcc` version 8.2.0, do `module load gcc/8.2.0`
 * If you do not specify a version of the package, the default one is loaded

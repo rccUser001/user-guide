@@ -1,76 +1,56 @@
 # Connection
-The SDE2 system is accessed over the end-to-end encrypted network. Users first establish a connection to the SDE Desktop and then authenticate to SDE2 from within the SDE Desktop. The SDE Desktop serves as a secure Windows-based gateway to the Linux-based SDE2 HPC environment. Data cannot be transferred directly from SDE2 to end-user devices.<br><br>
+Direct connection from the end-user devices to SDE2 is restricted. Instead, users are expected to establish a connection to the secure SDE Desktop and only then authenticate to SDE2. The SDE Desktop serves as a secure Windows-based gateway to the Linux-based SDE2 HPC environment. <br><br>
 
-![Screenshot showing SDE2 general connection](images/connection.png){ width="1000" }
+![Screenshot showing SDE2 general connection](images/sde2_tmp.png){ width="1000" }
 
-## STEP 1: From Local Machine to SDE Desktop 
+## STEP 1: From a Local Device to the SDE Desktop 
 ### Web Browser
 Navigate to [https://rdweb.wvd.microsoft.com/arm/webclient](https://rdweb.wvd.microsoft.com/arm/webclient) on your computer's web browser.
-Select "AVD Host" to launch the Virtual Desktop:
+You will be prompted for UChicago credentials and a second factor of authentication:
 
-![Screenshot showing AVD landing page](images/avd_webpage.png){ width="1000" }
+![Screenshot showing AVD login](images/avd1.png){ width="700" }<br><br>
 
-You will be prompted for your username (cnetID@uchicago.edu) and password:
+Add "AVD Host" workspace. You should then be able to launch the SDE Virtual Desktop in the browser:<br><br>
+![Screenshot showing AVD login](images/avd2.png){ width="700" }<br><br>
+![Screenshot showing AVD login](images/avd3.png){ width="700" }<br><br>
+![Screenshot showing AVD login](images/avd4.png){ width="700" }<br><br>
 
-![Screenshot showing AVD login](images/avd_login.png){ width="1000" }
+After logging in, you will arrive at the SDE Virtual Desktop where you can launch various applications. Note this is not SDE2 system but rather a secure itermidiate host:
 
-After logging in, you will arrive at the Desktop where you can launch applications:
+![Screenshot showing AVD Desktop](images/avd5.png){ width="1000" }
 
-![Screenshot showing AVD Desktop](images/avd_desktop.png){ width="1000" }
 
-## Microsoft Remote Desktop Client
-You can also connect from the Microsoft Remote Desktop App, available for download on the Windows or MacOS app store.
-After launching the app, click on the "+" symbol and select "Add Workspace":
+## STEP2: From the SDE Desktop to the SDE2 System
+There are several ways how to connect to SDE2 from within the SDE Desktop.
 
-![Screenshot showing Microsoft Remote Desktop App](images/avd_desktop_workspace.png){ width="500" }
-
-In the dialog box, put the URL
-"https://rdweb.wvd.microsoft.com":
-
-![Screenshot showing Microsoft Remote Desktop App](images/avd_desktop_add.png){ width="700" }
-
-Users do not need to be connected to UChicago VPN when lending on SDE Desktop. 
-
-## STEP2: From SDE Desktop to SDE2
-Once you are connected to the SDE environment using the AVD client following the steps given above, please follow one of the methods below to connect to SDE2 from the SDE environment.
-
-### SSH Client
-You can use Powershell or PuTTy terminal to connect to SDE2. Run the following command: ssh <cnetid>@sde.rcc.uchicago.edu: <br><br>
-![screenshot showing VMware Horizon data transfer](images/putty.jpg)
-![screenshot showing VMware Horizon data transfer](images/putty_confirm.jpg)
+### Command Line Interface (SSH)
+Open Powershell and run "ssh <cnetid>@midwayr2.rcc.uchicago.edu" or configure and save session in PuTTy: <br><br>
+![screenshot Powershell](images/avd6.png){ width="1000" }
 <br><br>
 
-### ThinLinc
-
+### Graphical User Interface (GUI)
 ThinLinc is a remote desktop server application. It is recommended to
 use ThinLinc when you run software that requires a graphical user
 interface, or "GUI" (e.g., Stata, MATLAB). To use ThinLinc to connect
 to SDE2, please take the following steps on the SDE desktop:
 
-1. Open a browser (Chrome or Firefox) and enter
-   `https://sde.rcc.uchicago.edu` in the address bar.
+1. Open a browser of your choice within the SDE Desktop. This browser will be running on the SDE Desktop which itself is nested into your local browser running on your end-user device. Inside this nested browser, enter the SDE2 ThinLinc URL`https://midwayr2.rcc.uchicago.edu` in the address bar.
 
-2. Enter your CNetID and password on the ThinLinc login page:<br><br>
-![Screenshot showing Chrome connecting to ThinLinc](images/tl_login.jpg)
+2. Enter your CNetID credentials and complete two-factor authentication on the ThinLinc login page:<br><br>
+![Screenshot showing Chrome connecting to ThinLinc](images/avd7.png){ width="100" }
 <br><br>
 
-3. Follow the two-factor authentication prompts:<br><br>
-![Screenshot showing ThinLinc 2FA](images/tl_2fa.jpg)
+3. If the login process is successful, you will see a Linux desktop environment. To access the command-line shell, select the Applications menu, then the Terminal icon:<br><br>
+![Screenshot showing ThinLinc terminal launch](images/avd8.png){ width="1000" }
 <br><br>
 
-4. If the login process is successful, you will see a Linux desktop environment. To access the command-line shell, select the Applications menu, then the Terminal icon:<br><br>
-![Screenshot showing ThinLinc terminal launch](images/tl_terminal.jpg)
-<br><br>
-
-5. After selecting the Terminal icon, you should see a Terminal window appear. Typically this will give a console prompt showing which login node you are connected to:<br><br>
-![Screenshot showing ThinLinc terminal](images/tl_terminal2.jpg)
-<br><br>
-
+4. After selecting the Terminal icon, you should see a Terminal window appear. Typically this will give a console prompt showing which login node you are connected 
 To exit ThinLinc, type `exit` in any Terminal window, select the top-right icon, then select the "Log Out" menu item and follow the instructions. Finally, close the browser window.<br><br>
-![Screenshot showing ThinLinc logout](images/tl_logout.jpg) <br><br>
-
-## Logging Out
-You can log out of the AVD by clicking the "Log off" application on the Desktop.
 !!! warning
     Once logged off, any data stored in your AVD user-space will be purged.
+    
+![Screenshot showing ThinLinc logout](images/avd9.png){ width="1000" } <br><br>
+
+
+
 
