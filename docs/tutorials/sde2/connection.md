@@ -24,7 +24,7 @@ After logging in, you will arrive at the SDE Virtual Desktop where you can launc
 There are several ways to connect to SDE2 from within the SDE Desktop.
 
 ### Command Line Interface (SSH)
-Open Powershell and run "ssh <cnetid>@midwayr2.rcc.uchicago.edu" or configure and save session in PuTTy: <br><br>
+Open Powershell and run "ssh cnetid@sde2.rcc.uchicago.edu" or configure and save session in PuTTy: <br><br>
 ![screenshot Powershell](images/avd6.png){ width="1000" }
 <br><br>
 
@@ -34,10 +34,10 @@ use ThinLinc when you run software that requires a graphical user
 interface, or "GUI" (e.g., Stata, MATLAB). To use ThinLinc to connect
 to SDE2, please take the following steps on the SDE desktop:
 
-1. Open a browser of your choice within the SDE Desktop. This browser will be running on the SDE Desktop which itself is nested into your local browser running on your end-user device. Inside this nested browser, enter the SDE2 ThinLinc URL: `https://midwayr2.rcc.uchicago.edu` in the address bar.
+1. Open a browser of your choice within the SDE Desktop. This browser will be running on the SDE Desktop which itself is nested into your local browser running on your end-user device. Inside this nested browser, enter the SDE2 ThinLinc URL: `https://sde2.rcc.uchicago.edu` in the address bar.
 
 2. Enter your CNetID credentials and complete two-factor authentication on the ThinLinc login page:<br><br>
-![Screenshot showing Chrome connecting to ThinLinc](images/avd7.png){ width="100" }
+![Screenshot showing Chrome connecting to ThinLinc](images/avd7.png){ width="400" }
 <br><br>
 
 3. If the login process is successful, you will see a Linux desktop environment. To access the command-line shell, select the Applications menu, then the Terminal icon:<br><br>

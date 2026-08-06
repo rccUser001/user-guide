@@ -61,7 +61,7 @@ After the regulated data has been transferred from the Data Provider to the SDE 
 ![screenshot showing VMware Horizon data transfer](images/winscp.jpg)
 <br><br>
 
-Connect to `midwayr2.rcc.uchicago.edu` with your CNet ID and password:<br><br>
+Connect to `sde2.rcc.uchicago.edu` with your CNet ID and password:<br><br>
 ![screenshot showing VMware Horizon data transfer](images/winscp_upload1_sde2.png)
 <br><br>
 
