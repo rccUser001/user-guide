@@ -21,7 +21,7 @@ After logging in, you will arrive at the SDE Virtual Desktop where you can launc
 
 
 ## STEP 2: From the SDE Desktop to the SDE2 System
-There are several ways to connect to SDE2 from within the SDE Desktop.
+There are several ways to connect to SDE2 from the SDE Desktop.
 
 ### Command Line Interface (SSH)
 Open Powershell and run "ssh <cnetid>@midwayr2.rcc.uchicago.edu" or configure and save session in PuTTy: <br><br>
