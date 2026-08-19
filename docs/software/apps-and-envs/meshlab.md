@@ -32,7 +32,13 @@ MeshLab is a GUI application and requires a graphical display. You must connect 
 
 ## Launching MeshLab
 
-Once connected with a graphical session, load the module and run:
+Once connected via ThinLinc or X11, start an interactive compute session before launching MeshLab — do not run it directly on the login node:
+
+```bash
+sinteractive --account=pi-[cnetid] --partition=caslake --nodes=1 --ntasks-per-node=1 --time=02:00:00
+```
+
+Then load the module and run:
 
 ```bash
 module load meshlab/2025.07
@@ -76,4 +82,4 @@ Your `/home`, `/scratch`, and `/project` directories are accessible inside MeshL
 
 - MeshLab on Midway3 runs inside an [Apptainer](singularity.md) container — this is handled transparently by the module wrapper and requires no extra steps from the user.
 - For rendering with per-vertex colors, enable **Render → Color → Per Vertex** in the MeshLab menu.
-- MeshLab is an interactive tool and is not suited for batch/non-interactive SLURM jobs. Use it from a login node or an interactive session (`sinteractive`).
+- MeshLab is an interactive tool and is not suited for batch/non-interactive SLURM jobs. Always launch it from an `sinteractive` session, not from a login node.

@@ -130,6 +130,7 @@ mkdir -p geogrid metgrid
 ln -sf $WPS_DIR/geogrid/GEOGRID.TBL geogrid/GEOGRID.TBL
 ln -sf $WPS_DIR/metgrid/METGRID.TBL metgrid/METGRID.TBL
 
+cp $WPS_DIR/namelist.wps .
 # Edit namelist.wps: set geog_data_path, start/end dates, domain config
 mpirun -np 4 geogrid.exe
 ```

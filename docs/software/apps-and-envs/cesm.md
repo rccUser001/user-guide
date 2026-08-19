@@ -113,24 +113,30 @@ cd /scratch/$USER/my_bw1850
 
 ### Midway3 (caslake partition)
 
-The SLURM script is generated automatically by `case.submit`. The following shows what a typical CESM 2.2.2 F2000climo job looks like after cloning:
+`case.submit` generates and submits the SLURM script automatically — you never invoke `cesm.exe` directly. CIME places the executable in `$EXEROOT` and prepares all runtime files in `$RUNDIR`. To inspect the generated script before submitting:
+
+```bash
+cat /scratch/$USER/my_f2000/.case.run
+```
+
+A typical generated script for CESM 2.2.2 F2000climo looks like:
 
 ```bash
 #!/bin/bash
 #SBATCH --job-name=cesm
-#SBATCH --account=pi-[cnetid]
+#SBATCH --account=rcc-staff
 #SBATCH --partition=caslake
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=48
 #SBATCH --time=02:00:00
 #SBATCH --exclusive
-#SBATCH --mem=0
 
-module load cesm/2.2.2-F2000climo-f19_g17-gnu-openmpi
+# ... CIME-generated environment setup ...
 
-cd /scratch/$USER/my_f2000
-./cesm.exe
+mpirun -np 48 $EXEROOT/cesm.exe
 ```
+
+Do not submit `.case.run` manually — always use `./case.submit` so CIME stages input files and manages job dependencies correctly.
 
 !!! note "Job efficiency"
     Use `seff <jobid>` after a run completes to check CPU and memory efficiency. CESM coupled runs on a single caslake node typically achieve >90% CPU efficiency.
@@ -176,4 +182,9 @@ See the [CIME documentation](https://esmci.github.io/cime/versions/master/html/)
 - **Input data**: pre-staged at `$DIN_LOC_ROOT` (set automatically by the module). Do not copy or move this directory.
 - **Output**: goes to `CIME_OUTPUT_ROOT`; set this to your `/scratch/$USER/` directory.
 - **UCX**: RCC clusters use an OpenMPI UCX bypass for memory-pinning compatibility. This is already set in the module — no action needed.
-- **Restart files**: CESM writes restart files at intervals set by `REST_N`/`REST_OPTION`. To continue a run: `./case.submit --no-batch` or resubmit via `case.submit`.
+- **Restart files**: CESM writes restart files at intervals set by `REST_N`/`REST_OPTION`. To continue a run, set `CONTINUE_RUN=TRUE` and update the run length, then resubmit:
+  ```bash
+  ./xmlchange CONTINUE_RUN=TRUE
+  ./xmlchange STOP_N=5,STOP_OPTION=ndays   # set the next segment length
+  ./case.submit
+  ```
