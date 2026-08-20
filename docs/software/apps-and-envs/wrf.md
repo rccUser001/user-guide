@@ -8,7 +8,7 @@ Keywords: `weather`, `climate`, `numerical weather prediction`, `atmospheric sci
 
 ## Available modules
 
-<div class="rcc-tabs" markdown="1">
+<div markdown="1">
 === "Midway2"
     ```
     -------------------- /software/modulefiles2 --------------------

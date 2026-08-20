@@ -21,7 +21,7 @@ If you just want to run one of the standard pre-built compsets, the compset modu
 
 ## Available modules
 
-<div class="rcc-tabs" markdown="1">
+<div markdown="1">
 === "Midway2"
     ```
     -------------------- /software/modulefiles2 --------------------
