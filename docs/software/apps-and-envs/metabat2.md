@@ -13,6 +13,16 @@ Keywords: `metagenomics`, `binning`, `MAG`, `assembly`, `microbial ecology`
 metabat2/2.18(default)
 ```
 
+To see what a module sets up:
+```bash
+module show metabat2/2.18
+```
+
+For built-in documentation:
+```bash
+module help metabat2/2.18
+```
+
 ---
 
 ## Executables
